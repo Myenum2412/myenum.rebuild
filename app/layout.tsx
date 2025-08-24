@@ -11,7 +11,43 @@ export const metadata: Metadata = {
   title: "MyEnum Digital Agency - Software, Website & Digital Marketing in Dubai, Salem & Kerala",
   description:
     "MyEnum Digital Agency delivers professional software development, website design, and digital marketing solutions in Dubai, Salem, and Kerala. Complete business growth solutions under one roof.",
-  // Add your keywords, openGraph, twitter here
+  keywords: [
+    "Software development Dubai",
+    "Website design Salem",
+    "Digital marketing Kerala",
+    "Business solutions near me",
+    "Web development Dubai near me",
+    "SEO services Salem near me",
+    "Social media marketing Kerala",
+    "Custom software solutions",
+    "Digital agency Dubai, Salem, Kerala",
+    "MyEnum Digital Agency",
+    // Add more keywords up to 1000+ for SEO
+  ],
+  openGraph: {
+    title: "MyEnum Digital Agency",
+    description:
+      "Professional software, website, and digital marketing solutions in Dubai, Salem & Kerala",
+    url: "https://www.myenum.com", // replace with your live URL
+    siteName: "MyEnum",
+    images: [
+      {
+        url: "https://www.myenum.com/og-image.png", // replace with your OG image
+        width: 1200,
+        height: 630,
+        alt: "MyEnum Digital Agency",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MyEnum Digital Agency",
+    description:
+      "Professional software, website, and digital marketing solutions in Dubai, Salem & Kerala",
+    images: ["https://www.myenum.com/og-image.png"], // replace with your OG image
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -41,16 +77,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-DE486L9YQ8');
           `}
         </Script>
-
-        {/* Google tag (gtag.js) */}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DE486L9YQ8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DE486L9YQ8');
-</script>
       </body>
     </html>
   );
