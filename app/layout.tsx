@@ -41,6 +41,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-DE486L9YQ8');
           `}
         </Script>
+
+        {/* Google tag (gtag.js) */}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DE486L9YQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DE486L9YQ8');
+</script>
       </body>
     </html>
   );
