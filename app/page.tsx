@@ -7,12 +7,10 @@ import IntegrationsSection from "@/components/integrations-8";
 import LogoCloud from "@/components/logo-cloud";
 import TeamSection from "@/components/team";
 import Testimonials from "@/components/testimonials";
-import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      <Analytics />
       <HeroSection />
       <LogoCloud />
       <Features />
