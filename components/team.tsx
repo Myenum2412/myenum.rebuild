@@ -1,0 +1,81 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+const members = [
+    {
+        name: 'Amarnath',
+        role: 'Founder - CEO',
+        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVrrQFHCy4pqleFTzbU5c0y7toJP2kDrCY9njO',
+        link: 'https://www.linkedin.com/in/amarnath-mk/',
+    },
+    {
+        name: 'Najas Nazar',
+        role: 'Co-Founder - Fullstack Developer',
+        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXV2672FCYuOgHy4nkJvUMmEf7VYA96jD3oeaZK',
+        link: 'https://www.linkedin.com/in/najas-nazar/',
+    },
+    {
+        name: 'KSR Gopinath',
+        role: 'Backend Developer - Cyber Security',
+        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVCmlm6v4RSu8BKLk3jcovGhXAxPeYartF0pf5',
+        link: 'https://www.linkedin.com/in/gopinathsr/',
+    },
+    {
+        name: 'Madana Gopal',
+        role: 'Camera Operator',
+        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVCcxjeRu4RSu8BKLk3jcovGhXAxPeYartF0pf',
+        link: 'https://www.linkedin.com/in/madana-gopal-722a6920b/',
+    },
+    {
+        name: 'Kishore G',
+        role: 'Marketing Manager',
+        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVqhk7IkfokGmCS6MdDsw8zQ1hZ2Tc7f5NLt4B',
+        link: '#',
+    },
+    {
+        name: 'Meera',
+        role: 'AI Influencer',
+        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVd4FRH0TKA7qnSZjpMR2ILHDa5WEOCb84UQm3',
+        link: 'https://www.instagram.com/meera.ai_myenum/',
+    },
+]
+
+export default function TeamSection() {
+    return (
+        <section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent border-y relative">
+            <div className="mx-auto max-w-5xl border-t px-6">
+                <span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">Team</span>
+                <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
+                    <div className="sm:w-2/5">
+                        <h2 className="text-3xl font-bold sm:text-4xl">Our Family Members</h2>
+                    </div>
+                    <div className="mt-6 sm:mt-0">
+                        <p>We are a team of experienced digital marketing professionals who are dedicated to helping businesses grow their online presence and reach their target audience.</p>
+                    </div>
+                </div>
+                <div className="mt-12 md:mt-24">
+                    <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+                        {members.map((member, index) => (
+                            <div key={index} className="group overflow-hidden">
+                                <Image className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl" src={member.avatar} alt="team member" width="826" height="1239" />
+                                <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
+                                    <div className="flex justify-between">
+                                        <h3 className=" text-base font-medium transition-all duration-500 group-hover:tracking-wider">{member.name}</h3>
+                                        {/* <span className="text-xs">_0{index + 1}</span> */}
+                                    </div>
+                                    <div className="mt-1 flex items-center justify-between">
+                                        <span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">{member.role}</span>
+                                        <Link href={member.link} className="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100">
+                                            {' '}
+                                            LinkedIn
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
