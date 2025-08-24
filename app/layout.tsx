@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
 import { HeroHeader } from "@/components/header";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -90,20 +89,16 @@ export const metadata: Metadata = {
     "Digital Marketing Kerala consultant",
     "Digital Marketing solutions Kerala",
     "Digital Marketing Kerala solutions",
-
-    // --- Continue expanding for Website Development, SEO, App Development, Ecommerce, Branding, PPC, etc. ---
-    // This block repeats for all services × all locations × modifiers (best, top, affordable, near me, packages, agency, company, services, expert, consultant, solutions)
-    // Total = ~1000 keywords
   ],
   openGraph: {
     title: "MyEnum Digital Agency - Software, Website & Digital Marketing",
     description:
-      "MyEnum Digital Agency offers end-to-end solutions for businesses including software, websites, and digital marketing .",
+      "MyEnum Digital Agency offers end-to-end solutions for businesses including software, websites, and digital marketing.",
     url: "https://www.myenum.in",
     siteName: "MyEnum Digital Agency",
     images: [
       {
-        url: "public/image/iconc.webp",
+        url: "/image/iconc.webp",
         width: 1200,
         height: 630,
         alt: "MyEnum Digital Agency",
@@ -114,14 +109,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "MyEnum Digital Agency - Software, Website & Digital Marketing",
+    title: "MyEnum Digital Agency - Software, Website & Digital Marketing",
     description:
       "Complete business growth solutions under one roof – Software Development, Website Design, and Digital Marketing in Dubai, Kerala and Tamil Nadu.",
-    images: ["public/image/iconc.webp"],
+    images: ["/image/iconc.webp"],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -131,13 +124,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "svumhdjdy5");
-</script>
+        {/* Microsoft Clarity */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "svumhdjdy5");
+            `,
+          }}
+        />
+
         {/* Google Analytics */}
         <script
           async
@@ -155,7 +154,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased dark  text-slate-50`}
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased dark text-slate-50`}
       >
         <HeroHeader />
         {children}
