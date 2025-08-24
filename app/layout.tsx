@@ -138,20 +138,14 @@ export default function RootLayout({
         />
 
         {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-S8EE8Y6F45"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-S8EE8Y6F45');
-            `,
-          }}
-        />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DE486L9YQ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DE486L9YQ8');
+</script>
       </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased dark text-slate-50`}
