@@ -228,7 +228,7 @@ export const metadata: Metadata = {
   "Website Kerala consultant",
   "Website solutions Kerala",
   "Website Kerala solutions",
-];
+],
   openGraph: {
     title: "MyEnum Digital Agency",
     description:
