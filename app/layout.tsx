@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "MyEnum Digital Agency - Software, Website & Digital Marketing in Dubai, Salem & Kerala",
   description:
     "MyEnum Digital Agency delivers professional software development, website design, and digital marketing solutions. Complete business growth solutions under one roof.",
-  keywords = [
+  keywords : [
   "Digital Marketing near me Dubai",
   "Digital Marketing Dubai near me",
   "best Digital Marketing Dubai",
