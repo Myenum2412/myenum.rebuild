@@ -18,7 +18,7 @@ const servicesLinks = [
 ];
 
 const productLinks = [
-  { href: "/undermaintenance", label: "Doctor Pro" },
+  { href: "https://doctorpro.myenum.in/", label: "Doctor Pro" },
   { href: "/undermaintenance", label: "AI Chatbot" },
   { href: "/undermaintenance", label: "Billing" },
   { href: "/undermaintenance", label: "SEO Platform" },
