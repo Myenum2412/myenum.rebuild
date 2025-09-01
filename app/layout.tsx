@@ -115,9 +115,7 @@ export const metadata: Metadata = {
 "cross-platform web development salem",
 "multilingual website development salem",
 "custom dashboards website salem",
-"web design for SMEs salem"
-]
-keyword: [
+"web design for SMEs salem",
 "web development salem",
 "website development salem",
 "web development company salem",
