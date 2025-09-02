@@ -783,6 +783,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
 
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="K/mXjnOi6MxGC51EZCroJg" async></script>
+
         {/* Google Analytics */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-DE486L9YQ8" strategy="afterInteractive" />
         <Script id="ga-script" strategy="afterInteractive">
