@@ -8,7 +8,7 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const jetbrainsMono = JetBrains_Mono({ variable: "--font-jetbrains-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MyEnum Digital Agency - Software, Website & Digital Marketing in Dubai, Salem & Kerala",
+  title: "MyEnum Agency - Software, Website & Digital Marketing",
   description:
     "MyEnum Digital Agency delivers professional software development, website design, and digital marketing solutions. Complete business growth solutions under one roof.",
   keywords : [
