@@ -145,7 +145,7 @@ export default function HeroSection() {
                                         size="lg"
                                         variant="ghost"
                                         className="h-10.5 rounded-xl px-5">
-                                        <Link href="#link">
+                                        <Link href="https://calendly.com/myenumam/myenum">
                                             <span className="text-nowrap">Request a demo</span>
                                         </Link>
                                     </Button>
