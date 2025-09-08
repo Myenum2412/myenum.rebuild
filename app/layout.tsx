@@ -1,3 +1,4 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -11,8 +12,56 @@ export const metadata: Metadata = {
   title: "MyEnum Agency - Software, Website & Digital Marketing",
   description:
     "MyEnum Digital Agency delivers professional software development, website design, and digital marketing solutions. Complete business growth solutions under one roof.",
-  keywords : [
-    "digital marketing services in Salem", "digital marketing agency Salem", "Salem digital marketing company", "digital marketing firm Salem", "online marketing services in Salem", "SEO services Salem", "Salem social media marketing", "PPC agency Salem", "best digital marketing agency in Salem", "local SEO Salem", "Salem branding services", "Salem digital advertising", "creative agency Salem", "visual search SEO Salem", "Salem digital marketing expert", "branding and marketing Salem", "content marketing agency Salem", "performance marketing Salem", "digital marketing consultant Salem", "Salem internet marketing", "Google Ads agency Salem", "social media agency Salem", "digital marketing specialist Salem", "digital marketing solutions Salem", "Salem website marketing", "digital marketing company near me", "digital marketing services near me", "online advertising Salem", "digital marketing for local business Salem", "lead generation Salem", "AI digital marketing Salem", "digital campaign Salem", "internet marketing agency Salem", "Salem online presence", "digital brand management Salem", "digital marketing for startups Salem", "paid advertising Salem", "Salem marketing services", "best SEO company Salem", "Salem digital transformation", "digital marketing promotion Salem", "Salem influencer marketing", "ecommerce marketing Salem", "Salem SEM services", "Salem SMO agency", "digital marketing packages Salem", "hyperlocal digital marketing Salem", "SEO expert Salem", "digital marketing Salem Tamil Nadu",
+  keywords: [
+    "digital marketing services in Salem", 
+    "digital marketing agency Salem", 
+    "Salem digital marketing company", 
+    "digital marketing firm Salem", 
+    "online marketing services in Salem", 
+    "SEO services Salem", 
+    "Salem social media marketing", 
+    "PPC agency Salem", 
+    "best digital marketing agency in Salem", 
+    "local SEO Salem", 
+    "Salem branding services", 
+    "Salem digital advertising", 
+    "creative agency Salem", 
+    "visual search SEO Salem", 
+    "Salem digital marketing expert", 
+    "branding and marketing Salem", 
+    "content marketing agency Salem", 
+    "performance marketing Salem", 
+    "digital marketing consultant Salem", 
+    "Salem internet marketing", 
+    "Google Ads agency Salem", 
+    "social media agency Salem", 
+    "digital marketing specialist Salem", 
+    "digital marketing solutions Salem", 
+    "Salem website marketing", 
+    "digital marketing company near me", 
+    "digital marketing services near me", 
+    "online advertising Salem", 
+    "digital marketing for local business Salem", 
+    "lead generation Salem", 
+    "AI digital marketing Salem", 
+    "digital campaign Salem", 
+    "internet marketing agency Salem", 
+    "Salem online presence", 
+    "digital brand management Salem", 
+    "digital marketing for startups Salem", 
+    "paid advertising Salem", 
+    "Salem marketing services", 
+    "best SEO company Salem", 
+    "Salem digital transformation", 
+    "digital marketing promotion Salem", 
+    "Salem influencer marketing", 
+    "ecommerce marketing Salem", 
+    "Salem SEM services", 
+    "Salem SMO agency", 
+    "digital marketing packages Salem", 
+    "hyperlocal digital marketing Salem", 
+    "SEO expert Salem", 
+    "digital marketing Salem Tamil Nadu",
     
     "web development salem",
 "website development salem",
@@ -741,16 +790,17 @@ export const metadata: Metadata = {
 
   // perplexity
   "web development Kerala", "website development Kerala", "web design Kerala", "web developer Kerala", "ecommerce website development Kerala", "responsive website design Kerala", "web application development Kerala", "custom web development Kerala", "WordPress website development Kerala", "UI/UX design Kerala", "website developer in Kerala", "web development services Kerala", "web design company Kerala", "website designing company Kerala", "top web developer Kerala", "local website developer Kerala", "SEO company Kerala", "digital marketing Kerala", "freelance web designer Kerala", "best e-commerce website Kerala", "mobile website development Kerala", "CMS website development Kerala", "small business web development Kerala", "corporate website design Kerala", "custom theme integration Kerala", "web server hosting Kerala", "domain registration Kerala", "web page development Kerala", "landing page design Kerala", "hire web developer Kerala", "professional web developer Kerala", "top rated web development Kerala", "affordable website development Kerala", "startup website development Kerala", "portfolio website design Kerala", "kerala web developer agency", "web development support Kerala", "website redesign Kerala", "online business website Kerala", "ecommerce platform development Kerala", "custom website solutions Kerala", "web design expert Kerala", "web consulting Kerala", "website maintenance Kerala", "secure website design Kerala", "modern website development Kerala", "web design and development Kerala", "website optimization Kerala", "UI designer Kerala", "backend developer Kerala", "frontend developer Kerala", "JavaScript developer Kerala", "Python web development Kerala", "ReactJS developer Kerala", "Node.js development Kerala", "PHP web development Kerala", "Drupal website development Kerala", "Magento developer Kerala", "Shopify website development Kerala", "Woocommerce website development Kerala", "kerala website developers", "kerala web agency", "kerala web services", "high performance web design Kerala", "web development consultant Kerala", "site audit services Kerala", "local SEO expert Kerala", "kerala website content services", "web hosting services Kerala", "website management services Kerala", "website analytics Kerala", "local business web design Kerala", "sector-specific web development Kerala", "education institute website Kerala", "NGO website developer Kerala", "hospital website developer Kerala", "restaurant website development Kerala", "hotel website development Kerala", "real estate website development Kerala", "event website design Kerala", "school website developer Kerala", "news portal development Kerala", "travel website Kerala", "rentals website design Kerala", "job portal website Kerala", "online booking development Kerala", "creative web design Kerala", "interactive website Kerala", "business website design Kerala", "lead generation website Kerala", "conversion website design Kerala", "mini site development Kerala", "fast loading website Kerala", "SEO friendly website Kerala", "brand website development Kerala", "company website developer Kerala", "personal website designer Kerala", "online catalog website Kerala", "customer-centric web developer Kerala", "B2B website development Kerala", "B2C web design Kerala", "mobile app developer Kerala", "web app developer Kerala", "API integration website Kerala", "custom plugin developer Kerala", "web security solutions Kerala",
-],
+
+  ],
   openGraph: {
     title: "MyEnum Digital Agency",
     description:
       "Professional software, website, and digital marketing solutions in Dubai, Salem & Kerala",
-    url: "https://www.myenum.com", // replace with your live URL
+    url: "https://www.myenum.in",
     siteName: "MyEnum",
     images: [
       {
-        url: "https://www.myenum.com/og-image.png", // replace with your OG image
+        url: "https://www.myenum.in/og-image.png",
         width: 1200,
         height: 630,
         alt: "MyEnum Digital Agency",
@@ -764,15 +814,38 @@ export const metadata: Metadata = {
     title: "MyEnum Digital Agency",
     description:
       "Professional software, website, and digital marketing solutions in Dubai, Salem & Kerala",
-    images: ["https://www.myenum.com/og-image.png"], // replace with your OG image
+    images: ["https://www.myenum.in/og-image.png"],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MyEnum Digital Agency",
+    "url": "https://www.myenum.in",
+    "logo": "https://www.myenum.in/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/myenum",
+      "https://www.linkedin.com/company/myenum",
+    ],
+  };
+
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} antialiased dark text-slate-50`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${jetbrainsMono.variable} antialiased dark text-slate-50`}
+    >
       <body>
         <ClientLayout>{children}</ClientLayout>
+
+        {/* Schema.org JSON-LD */}
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
 
         {/* Microsoft Clarity */}
         <Script id="clarity" strategy="afterInteractive">
@@ -785,10 +858,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
 
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="K/mXjnOi6MxGC51EZCroJg" async></script>
+        {/* Ahrefs Analytics */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="K/mXjnOi6MxGC51EZCroJg"
+          async
+        ></script>
 
         {/* Google Analytics */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-DE486L9YQ8" strategy="afterInteractive" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DE486L9YQ8"
+          strategy="afterInteractive"
+        />
         <Script id="ga-script" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
