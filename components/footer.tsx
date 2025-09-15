@@ -13,19 +13,19 @@ import {
   MessageCircle,
   ArrowRight
 } from "lucide-react";
+import { he } from "zod/v4/locales";
 
 const servicesLinks = [
-  { href: "/undermaintenance", label: "Digital Marketing" },
+  { href: "/undermaintenance", label: "Software Development" },
   { href: "/undermaintenance", label: "Web Development" },
-  { href: "/undermaintenance", label: "Graphic Design" },
+  { href: "/undermaintenance", label: "App Development" },
+  { href: "/undermaintenance", label: "Digital Marketing" },
   { href: "/undermaintenance", label: "SEO" },
   { href: "/undermaintenance", label: "Social Media Management" },
-  { href: "/undermaintenance", label: "Content Creation" },
-  { href: "/undermaintenance", label: "Video Editing" },
 ];
 
 const productLinks = [
-  { href: "https://doctorpro.myenum.in/", label: "Doctor Pro" },
+  { href: "https://www.thedoctorpro.com/", label: "The Doctor Pro" },
   { href: "/undermaintenance", label: "AI Chatbot" },
   { href: "/undermaintenance", label: "Billing" },
 ];
