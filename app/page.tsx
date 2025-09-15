@@ -1,3 +1,4 @@
+// pages/index.tsx
 import Head from "next/head";
 import Features from "@/components/features-12";
 import Footer from "@/components/footer";
@@ -13,17 +14,52 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Best Digital Marketing Agency in Salem | SEO, PPC, Branding, Content</title>
-        <meta name="description" content="Looking for digital marketing services in Salem? Myenum Agency provides SEO services, PPC campaigns, social media marketing, content marketing, branding services, and performance marketing for businesses in Salem, Tamil Nadu." />
-        <meta name="keywords" content="digital marketing services in Salem, digital marketing agency Salem, Salem digital marketing company, SEO services Salem, social media marketing Salem, PPC agency Salem, local SEO Salem, Salem branding services, online marketing Salem, Salem digital advertising, content marketing agency Salem, digital marketing consultant Salem, Google Ads agency Salem, digital marketing expert Salem, performance marketing Salem, digital campaign Salem, internet marketing agency Salem, lead generation Salem, ecommerce marketing Salem, hyperlocal digital marketing Salem, AI digital marketing Salem, Salem website marketing, digital marketing packages Salem" />
+        <title>Myenum Agency - Advanced SaaS Solutions & Software Development</title>
+        <meta
+          name="description"
+          content="Myenum Agency offers advanced SaaS solutions, custom software development, and digital transformation services for businesses. Contact us today!"
+        />
+        <meta
+          name="keywords"
+          content="SaaS solutions, software development, Myenum Agency, digital transformation, business solutions, web app development"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://www.myenum.com/" />
 
         {/* Open Graph for social sharing */}
-        <meta property="og:title" content="Top Digital Marketing Agency in Salem | SEO, PPC, Social Media & Branding" />
-        <meta property="og:description" content="Myenum Agency offers expert digital marketing solutions in Salem, Tamil Nadu. Services include SEO, PPC, content marketing, branding, performance marketing, social media management, and more." />
+        <meta property="og:title" content="Myenum Agency - SaaS & Software Solutions" />
+        <meta
+          property="og:description"
+          content="Advanced SaaS solutions, custom software development, and digital solutions by Myenum Agency."
+        />
         <meta property="og:url" content="https://www.myenum.com/" />
         <meta property="og:type" content="website" />
+
+        {/* Schema.org JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Myenum Agency",
+              "url": "https://www.myenum.com/",
+              "logo": "https://www.myenum.com/logo.png", // Replace with your actual logo URL
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-90423-76479",
+                "contactType": "Customer Service",
+                "areaServed": "IN"
+              },
+              "sameAs": [
+                "https://www.facebook.com/yourfacebook",
+                "https://www.instagram.com/yourinstagram",
+                "https://twitter.com/yourtwitter",
+                "https://www.linkedin.com/company/yourlinkedin"
+              ]
+            })
+          }}
+        />
       </Head>
 
       <main className="overflow-hidden">
