@@ -4,7 +4,6 @@ import React from "react";
 import Footer from "@/components/footer";
 import { Iphone15Pro } from "@/components/ui/iphone-15-pro";
 import { CheckCircle, Users, FileText, Activity } from "lucide-react";
-import { RainbowButton } from "@/components/ui/rainbow-button";
 
 function Page() {
   return (
