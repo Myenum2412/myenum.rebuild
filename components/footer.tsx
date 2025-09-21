@@ -2,30 +2,25 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import Image from "next/image";
-import { 
-  Facebook, 
-  Instagram, 
-  Mail, 
-  MessageCircle,
-  ArrowRight
-} from "lucide-react";
-import { he } from "zod/v4/locales";
+
+// Import react-icons
+import { BsFacebook, BsInstagram, BsWhatsapp, BsEnvelope } from "react-icons/bs";
 
 const servicesLinks = [
-  { href: "/undermaintenance", label: "Software Development" },
   { href: "/undermaintenance", label: "Web Development" },
-  { href: "/undermaintenance", label: "App Development" },
+  { href: "/undermaintenance", label: "Software Developer" },
   { href: "/undermaintenance", label: "Digital Marketing" },
   { href: "/undermaintenance", label: "SEO" },
   { href: "/undermaintenance", label: "Social Media Management" },
+  { href: "/undermaintenance", label: "Video Editing" },
 ];
 
 const productLinks = [
-  { href: "https://www.thedoctorpro.com/", label: "The Doctor Pro" },
+  { href: "https://doctorpro.myenum.in/", label: "Doctor Pro" },
   { href: "/undermaintenance", label: "AI Chatbot" },
   { href: "/undermaintenance", label: "Billing" },
 ];
@@ -33,32 +28,26 @@ const productLinks = [
 const quickLinks = [
   { href: "/undermaintenance", label: "About" },
   { href: "/undermaintenance", label: "Services" },
-  { href: "/undermaintenance", label: "Contact" },
+  { href: "/contact", label: "Contact" },
   { href: "/undermaintenance", label: "Blog" },
   { href: "/undermaintenance", label: "Careers" },
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms of Service" },
+  { href: "/undermaintenance", label: "Privacy Policy" },
+  { href: "/undermaintenance", label: "Terms of Service" },
 ];
 
 const communityLinks = [
-  { href: "https://www.instagram.com/myenum.in/", label: "Instagram", icon: Instagram },
-  { href: "https://www.facebook.com/p/My-enum-61572140267076/", label: "Facebook", icon: Facebook },
+  { href: "https://www.instagram.com/myenum.in/", label: "Instagram" },
+  {
+    href: "https://www.facebook.com/p/My-enum-61572140267076/",
+    label: "Facebook",
+  },
   { href: "https://in.linkedin.com/company/myenum-am", label: "LinkedIn" },
 ];
 
 const footerLinks = [
-  {
-    name: "Services",
-    links: servicesLinks,
-  },
-  {
-    name: "Product",
-    links: productLinks,
-  },
-  {
-    name: "Quick Links",
-    links: quickLinks,
-  },
+  { name: "Services", links: servicesLinks },
+  { name: "Product", links: productLinks },
+  { name: "Quick Links", links: quickLinks },
 ];
 
 export default function Footer() {
@@ -67,57 +56,59 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl space-y-16 px-5 py-16">
         {/* Logo + Social Icons */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-8">
-          <Link href="/" aria-label="go home">
+          <Link
+            href="/"
+            aria-label="go home"
+            className="flex items-center gap-2"
+          >
             <Image
               src={`/iconc.webp`}
               alt="logo"
               width={30}
               height={30}
-              className={`rounded-full`}
+              className="rounded-full"
             />
+            <p className="text-2xl font-bold">MyEnum Agency</p>
           </Link>
 
-          <div className="flex gap-3">
-            {/* Facebook */}
+          <div className="flex gap-3 text-2xl text-muted-foreground">
+            {/* Social Icons with hover color */}
             <Link
               href="https://www.facebook.com/p/My-enum-61572140267076/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-muted-foreground hover:text-primary block p-2 rounded-full hover:bg-muted transition-colors"
+              className="hover:text-primary transition-colors duration-150"
             >
-              <Facebook className="size-5" />
+              <BsFacebook />
             </Link>
 
-            {/* Instagram */}
             <Link
               href="https://www.instagram.com/myenum.in/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="text-muted-foreground hover:text-primary block p-2 rounded-full hover:bg-muted transition-colors"
+              className="hover:text-primary transition-colors duration-150"
             >
-              <Instagram className="size-5" />
+              <BsInstagram />
             </Link>
 
-            {/* WhatsApp */}
             <Link
               href="https://wa.me/919042376479"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="text-muted-foreground hover:text-primary block p-2 rounded-full hover:bg-muted transition-colors"
+              className="hover:text-primary transition-colors duration-150"
             >
-              <MessageCircle className="size-5" />
+              <BsWhatsapp />
             </Link>
 
-            {/* Mail */}
             <Link
-              href="mailto:work@myenum,in"
+              href="mailto:myenumam@gmail.com"
               aria-label="Mail"
-              className="text-muted-foreground hover:text-primary block p-2 rounded-full hover:bg-muted transition-colors"
+              className="hover:text-primary transition-colors duration-150"
             >
-              <Mail className="size-5" />
+              <BsEnvelope />
             </Link>
           </div>
         </div>
@@ -128,14 +119,13 @@ export default function Footer() {
             <div key={index}>
               <span className="font-medium">{linksGroup.name}</span>
               <ul className="mt-4 list-inside space-y-4">
-                {linksGroup.links.map((link, index) => (
-                  <li key={index}>
+                {linksGroup.links.map((link, idx) => (
+                  <li key={idx}>
                     <Link
                       href={link.href}
-                      className="hover:text-primary text-muted-foreground text-sm duration-150 flex items-center gap-1 group"
+                      className="text-muted-foreground text-sm hover:text-primary hover:underline duration-150"
                     >
                       {link.label}
-                      <ArrowRight className="size-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
                   </li>
                 ))}
@@ -143,31 +133,24 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Socials + Newsletter */}
           <div>
             <span className="text-sm font-medium">Socials</span>
             <ul className="mt-4 list-inside space-y-4">
-              {communityLinks.map((link, index) => {
-                const IconComponent = link.icon;
-                return (
-                  <li key={index}>
-                    <Link
-                      href={link.href}
-                      className="hover:text-primary text-muted-foreground text-sm duration-150 flex items-center gap-2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {IconComponent && <IconComponent className="size-4" />}
-                      {link.label}
-                    </Link>
-                  </li>
-                );
-              })}
+              {communityLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground text-sm hover:text-primary hover:underline duration-150"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
 
             <form className="mt-12 w-full max-w-xs">
               <div className="space-y-2.5">
-                <Label className="block text-sm font-medium" htmlFor="email">
+                <Label htmlFor="email" className="block text-sm font-medium">
                   Subscribe to our newsletter
                 </Label>
                 <Input
@@ -179,9 +162,9 @@ export default function Footer() {
                   name="email"
                 />
               </div>
-              <Button type="submit" className="mt-3 gap-1">
-                <span>Subscribe</span>
-                <ArrowRight className="size-4" />
+
+              <Button type="submit" className="mt-3">
+                Subscribe
               </Button>
             </form>
           </div>
@@ -192,7 +175,7 @@ export default function Footer() {
           <span>&copy; {new Date().getFullYear()} MyEnum</span>
           <Link
             href="https://www.myenum.in"
-            className="text-muted-foreground hover:text-primary text-sm"
+            className="text-muted-foreground text-sm hover:text-primary hover:underline duration-150"
           >
             All Rights Reserved
           </Link>
