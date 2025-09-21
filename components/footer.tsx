@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
-// Import react-icons
-import { BsFacebook, BsInstagram, BsWhatsapp, BsEnvelope } from "react-icons/bs";
+// Correct lucide-react imports
+import { Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
 
 const servicesLinks = [
   { href: "/undermaintenance", label: "Web Development" },
@@ -37,10 +37,7 @@ const quickLinks = [
 
 const communityLinks = [
   { href: "https://www.instagram.com/myenum.in/", label: "Instagram" },
-  {
-    href: "https://www.facebook.com/p/My-enum-61572140267076/",
-    label: "Facebook",
-  },
+  { href: "https://www.facebook.com/p/My-enum-61572140267076/", label: "Facebook" },
   { href: "https://in.linkedin.com/company/myenum-am", label: "LinkedIn" },
 ];
 
@@ -52,78 +49,70 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="m-1 rounded-3xl border">
-      <div className="mx-auto max-w-5xl space-y-16 px-5 py-16">
+    <footer className="bg-black text-white rounded-3xl border border-gray-800">
+      <div className="mx-auto max-w-5xl px-5 py-16 space-y-16">
         {/* Logo + Social Icons */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-8">
-          <Link
-            href="/"
-            aria-label="go home"
-            className="flex items-center gap-2"
-          >
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-800 pb-8">
+          <Link href="/" aria-label="go home" className="flex items-center gap-2">
             <Image
-              src={`/iconc.webp`}
+              src="/iconc.webp"
               alt="logo"
-              width={30}
-              height={30}
+              width={40}
+              height={40}
               className="rounded-full"
             />
             <p className="text-2xl font-bold">MyEnum Agency</p>
           </Link>
 
-          <div className="flex gap-3 text-2xl text-muted-foreground">
-            {/* Social Icons with hover color */}
+          <div className="flex gap-4 text-2xl">
             <Link
               href="https://www.facebook.com/p/My-enum-61572140267076/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="hover:text-primary transition-colors duration-150"
+              className="hover:text-blue-600 transition-colors duration-150"
             >
-              <BsFacebook />
+              <Facebook />
             </Link>
-
             <Link
               href="https://www.instagram.com/myenum.in/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="hover:text-primary transition-colors duration-150"
+              className="hover:text-pink-500 transition-colors duration-150"
             >
-              <BsInstagram />
+              <Instagram />
             </Link>
-
             <Link
               href="https://wa.me/919042376479"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="hover:text-primary transition-colors duration-150"
+              className="hover:text-green-500 transition-colors duration-150"
             >
-              <BsWhatsapp />
+              <MessageCircle />
             </Link>
-
             <Link
               href="mailto:myenumam@gmail.com"
               aria-label="Mail"
-              className="hover:text-primary transition-colors duration-150"
+              className="hover:text-yellow-400 transition-colors duration-150"
             >
-              <BsEnvelope />
+              <Mail />
             </Link>
           </div>
         </div>
 
         {/* Footer Links */}
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-          {footerLinks.map((linksGroup, index) => (
-            <div key={index}>
-              <span className="font-medium">{linksGroup.name}</span>
-              <ul className="mt-4 list-inside space-y-4">
-                {linksGroup.links.map((link, idx) => (
-                  <li key={idx}>
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+          {footerLinks.map((group, idx) => (
+            <div key={idx}>
+              <h3 className="font-semibold text-lg mb-4">{group.name}</h3>
+              <ul className="space-y-3">
+                {group.links.map((link, id) => (
+                  <li key={id}>
                     <Link
                       href={link.href}
-                      className="text-muted-foreground text-sm hover:text-primary hover:underline duration-150"
+                      className="text-gray-400 text-sm hover:text-white hover:underline transition-colors duration-150"
                     >
                       {link.label}
                     </Link>
@@ -134,13 +123,15 @@ export default function Footer() {
           ))}
 
           <div>
-            <span className="text-sm font-medium">Socials</span>
-            <ul className="mt-4 list-inside space-y-4">
-              {communityLinks.map((link, index) => (
-                <li key={index}>
+            <h3 className="font-semibold text-lg mb-4">Socials</h3>
+            <ul className="space-y-3">
+              {communityLinks.map((link, idx) => (
+                <li key={idx}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground text-sm hover:text-primary hover:underline duration-150"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 text-sm hover:text-white hover:underline transition-colors duration-150"
                   >
                     {link.label}
                   </Link>
@@ -148,34 +139,30 @@ export default function Footer() {
               ))}
             </ul>
 
-            <form className="mt-12 w-full max-w-xs">
-              <div className="space-y-2.5">
-                <Label htmlFor="email" className="block text-sm font-medium">
-                  Subscribe to our newsletter
-                </Label>
+            <form className="mt-6 w-full max-w-xs">
+              <Label htmlFor="email" className="block text-sm font-medium mb-2">
+                Subscribe to our newsletter
+              </Label>
+              <div className="flex gap-2">
                 <Input
-                  className="input variant-mixed sz-md"
-                  placeholder="Your email"
-                  type="email"
                   id="email"
-                  required
+                  type="email"
                   name="email"
+                  placeholder="Your email"
+                  required
                 />
+                <Button type="submit">Subscribe</Button>
               </div>
-
-              <Button type="submit" className="mt-3">
-                Subscribe
-              </Button>
             </form>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="bg-muted mt-16 flex items-center justify-between rounded-md p-4 px-6 py-3">
+        <div className="mt-12 flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 pt-4 text-gray-400 text-sm">
           <span>&copy; {new Date().getFullYear()} MyEnum</span>
           <Link
             href="https://www.myenum.in"
-            className="text-muted-foreground text-sm hover:text-primary hover:underline duration-150"
+            className="hover:text-white underline transition-colors duration-150 mt-2 sm:mt-0"
           >
             All Rights Reserved
           </Link>
