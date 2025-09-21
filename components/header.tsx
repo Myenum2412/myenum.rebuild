@@ -13,6 +13,7 @@ const menuItems = [
   { name: 'About Us', href: '/undermaintenance' },
   { name: 'Services', href: '/undermaintenance' },
   { name: 'Solutions', href: '/undermaintenance' },
+  { name: 'Our Product', href: '/product' },
   { name: 'Blog', href: '/undermaintenance' },
 ]
 
