@@ -3,8 +3,9 @@
 import React from "react";
 import Head from "next/head";
 import Footer from "@/components/footer";
-import  ServicesSection from "@/components/ui/ServicesSection";
+import ServicesSection from "@/components/ui/ServicesSection";
 import FeaturesGrid from "@/components/FeaturesGrid";
+import { VortexDemo } from "@/components/VortexDemo";
 
 function page() {
   return (
@@ -51,6 +52,8 @@ function page() {
           <ServicesSection />
         </div>
       </section>
+
+      <VortexDemo />
       <Footer />
     </>
   );
