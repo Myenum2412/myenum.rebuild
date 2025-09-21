@@ -48,10 +48,9 @@ function page() {
       <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
         <div className="@container mx-auto max-w-6xl text-white rounded-2xl">
           <FeaturesGrid />
-          <ServicesSection />\
+          <ServicesSection />
         </div>
       </section>
-
       <Footer />
     </>
   );
