@@ -11,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({ variable: "--font-jetbrains-mono", subset
 export const metadata: Metadata = {
   title: "MyEnum Agency - Software, Website & Digital Marketing",
   description:
-    "MyEnum Digital Agency delivers software development, website design, and digital marketing solutions for complete business growth.",
+    "Looking for top digital marketing services in Dubai? We specialize in SEO, PPC, social media & branding to help you grow your business online",
   keywords: [
     "digital marketing Dubai",
   "best digital marketing agency UK",
