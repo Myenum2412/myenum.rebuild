@@ -60,10 +60,13 @@ export function Iphone15Pro({ src, videoSrc, url, ...props }: Iphone15ProProps) 
         {/* Live website */}
         {url && (
           <foreignObject x="21.25" y="19.25" width="389.5" height="843.5">
-            <iframe
-              src={url}
-              className="w-full h-full rounded-[55.75px] border-none"
-            />
+            <div {...({ xmlns: "http://www.w3.org/1999/xhtml" } as any)} className="w-full h-full">
+              <iframe
+                src={url}
+                className="w-full h-full rounded-[55.75px] border-none"
+                style={{ minHeight: "100%", minWidth: "100%" }}
+              />
+            </div>
           </foreignObject>
         )}
 
