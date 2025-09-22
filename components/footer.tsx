@@ -20,7 +20,7 @@ const servicesLinks = [
 ];
 
 const productLinks = [
-  { href: "https://doctorpro.myenum.in/", label: "Doctor Pro" },
+  { href: "https://www.thedoctorpro.com/", label: "The Doctor Pro" },
   { href: "/undermaintenance", label: "AI Chatbot" },
   { href: "/undermaintenance", label: "Billing" },
 ];
@@ -28,9 +28,8 @@ const productLinks = [
 const quickLinks = [
   { href: "/undermaintenance", label: "About" },
   { href: "/undermaintenance", label: "Services" },
-  { href: "/contact", label: "Contact" },
+  { href: "/product", label: "Our Product" },
   { href: "/undermaintenance", label: "Blog" },
-  { href: "/undermaintenance", label: "Careers" },
   { href: "/undermaintenance", label: "Privacy Policy" },
   { href: "/undermaintenance", label: "Terms of Service" },
 ];
