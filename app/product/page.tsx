@@ -519,7 +519,7 @@ export default function Page() {
             {/* iPhone Component */}
             <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
               <div className="w-64 sm:w-72 md:w-80 relative">
-                <Iphone15Pro className="w-full auto" url="https://thedoctorpro.com/" />
+                <Iphone15Pro className="w-full h-auto" url="https://thedoctorpro.com/" />
               </div>
             </div>
           </div>
