@@ -66,13 +66,19 @@ export function Iphone15Pro({ src, videoSrc, url, ...props }: Iphone15ProProps) 
             height="843.5"
             requiredExtensions="http://www.w3.org/1999/xhtml"
           >
-            <div xmlns="http://www.w3.org/1999/xhtml" className="w-full h-full">
-              <iframe
-                src={url}
-                className="w-full h-full rounded-[55.75px] border-none"
-                style={{ minHeight: "100%", minWidth: "100%" }}
-              />
-            </div>
+            <div
+              className="w-full h-full"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;">
+                    <iframe 
+                      src="${url}" 
+                      style="width:100%;height:100%;border:none;border-radius:55.75px;min-height:100%;min-width:100%;" 
+                    ></iframe>
+                  </div>
+                `,
+              }}
+            />
           </foreignObject>
         )}
 
