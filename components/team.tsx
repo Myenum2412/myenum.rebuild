@@ -15,12 +15,6 @@ const members = [
         link: 'https://www.linkedin.com/in/najas-nazar/',
     },
     {
-        name: 'KSR Gopinath',
-        role: 'Backend Developer - Cyber Security',
-        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVCmlm6v4RSu8BKLk3jcovGhXAxPeYartF0pf5',
-        link: 'https://www.linkedin.com/in/gopinathsr/',
-    },
-    {
         name: 'Madana Gopal',
         role: 'Camera Operator',
         avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVCcxjeRu4RSu8BKLk3jcovGhXAxPeYartF0pf',
