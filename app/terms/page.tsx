@@ -249,7 +249,7 @@ export default function TermsAndConditions() {
             <p>For any questions related to these Terms and Conditions, please contact:</p>
             <div className="mt-4 space-y-2">
               <p className="flex items-center">
-                <span className="mr-2">📧</span> Email: <Link href="mailto:support@myenum.com" className="ml-1 text-blue-600 hover:underline">support@myenum.com</Link>
+                <span className="mr-2">📧</span> Email: <Link href="mailto:developer@myenum.in" className="ml-1 text-blue-600 hover:underline">developer@myenum.in</Link>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📞</span> Phone: <Link href="tel:+919042376479" className="ml-1 text-blue-600 hover:underline">+91 90423 76479</Link>

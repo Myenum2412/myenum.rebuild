@@ -92,7 +92,7 @@ export default function Footer() {
               <MessageCircle />
             </Link>
             <Link
-              href="mailto:myenumam@gmail.com"
+              href="mailto:developer@myenum.in"
               aria-label="Mail"
               className="hover:text-yellow-400 transition-colors duration-150"
             >

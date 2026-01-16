@@ -6,8 +6,13 @@ import { z } from 'zod';
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
-  phone: z.string().min(10, 'Phone number must be at least 10 digits'),
-  message: z.string().min(10, 'Message must be at least 10 characters').optional(),
+  service: z.string().min(1, 'Please select a service'),
+  dateRange: z.string().optional(),
+  state: z.string().min(1, 'Please select a state'),
+  district: z.string().min(1, 'Please select a district'),
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+  // Keep phone for backward compatibility
+  phone: z.string().min(10, 'Phone number must be at least 10 digits').optional(),
 });
 
 export async function POST(request: NextRequest) {
@@ -29,7 +34,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    console.log('Attempting to send email to:', process.env.EMAIL_USER);
+    console.log('Attempting to send email to: developer@myenum.in');
 
     // Create transporter
     const transporter = nodemailer.createTransport({
@@ -52,27 +57,64 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Helper function to escape HTML
+    const escapeHtml = (text: string) => {
+      return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    };
+
     // Email content
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Where you want to receive emails
-      subject: `New Contact Form Submission from ${validatedData.name}`,
+      from: `"Myenum Website" <${process.env.EMAIL_USER}>`,
+      to: 'developer@myenum.in',
+      replyTo: validatedData.email,
+      subject: `New Contact Form Submission - ${validatedData.service || 'General Inquiry'}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333;">New Contact Form Submission</h2>
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
-            <p><strong>Name:</strong> ${validatedData.name}</p>
-            <p><strong>Email:</strong> ${validatedData.email}</p>
-            <p><strong>Phone:</strong> ${validatedData.phone}</p>
-            <p><strong>Message:</strong></p>
-            <p style="background-color: white; padding: 15px; border-radius: 4px; border-left: 4px solid #007bff;">
-              ${validatedData.message || 'No message provided'}
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
+            <h1 style="color: white; margin: 0; font-size: 24px;">New Contact Form Submission</h1>
+          </div>
+          <div style="background-color: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">
+            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              <h2 style="color: #667eea; margin-top: 0; border-bottom: 2px solid #667eea; padding-bottom: 10px;">Contact Information</h2>
+              <p style="margin: 10px 0;"><strong style="color: #555;">Name:</strong> <span style="color: #333;">${escapeHtml(validatedData.name)}</span></p>
+              <p style="margin: 10px 0;"><strong style="color: #555;">Email:</strong> <a href="mailto:${escapeHtml(validatedData.email)}" style="color: #667eea; text-decoration: none;">${escapeHtml(validatedData.email)}</a></p>
+              ${validatedData.phone ? `<p style="margin: 10px 0;"><strong style="color: #555;">Phone:</strong> <a href="tel:${escapeHtml(validatedData.phone)}" style="color: #667eea; text-decoration: none;">${escapeHtml(validatedData.phone)}</a></p>` : ''}
+            </div>
+            
+            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              <h2 style="color: #667eea; margin-top: 0; border-bottom: 2px solid #667eea; padding-bottom: 10px;">Service Details</h2>
+              <p style="margin: 10px 0;"><strong style="color: #555;">Service:</strong> <span style="color: #333;">${escapeHtml(validatedData.service || 'Not specified')}</span></p>
+              ${validatedData.dateRange ? `<p style="margin: 10px 0;"><strong style="color: #555;">Preferred Date:</strong> <span style="color: #333;">${escapeHtml(validatedData.dateRange)}</span></p>` : ''}
+              <p style="margin: 10px 0;"><strong style="color: #555;">Location:</strong> <span style="color: #333;">${escapeHtml(validatedData.district)}, ${escapeHtml(validatedData.state)}</span></p>
+            </div>
+            
+            <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              <h2 style="color: #667eea; margin-top: 0; border-bottom: 2px solid #667eea; padding-bottom: 10px;">Message</h2>
+              <div style="background-color: #f5f5f5; padding: 15px; border-radius: 4px; border-left: 4px solid #667eea; margin-top: 10px;">
+                <p style="margin: 0; color: #333; white-space: pre-wrap;">${escapeHtml(validatedData.message || 'No message provided')}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 20px; padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
+            <p style="color: #666; font-size: 12px; margin: 0;">
+              This email was sent from the Myenum Agency contact form.<br>
+              You can reply directly to this email to contact ${escapeHtml(validatedData.name)}.
             </p>
           </div>
-          <p style="color: #666; font-size: 12px; margin-top: 20px;">
-            This email was sent from your website contact form.
-          </p>
-        </div>
+        </body>
+        </html>
       `,
     };
 

@@ -35,7 +35,7 @@ export default function IntegrationsSection() {
                 enhance your workflow.
               </p>
               <Button  size="sm" asChild>
-                <Link href="#">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
 

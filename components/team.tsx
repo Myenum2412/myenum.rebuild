@@ -20,18 +20,6 @@ const members = [
         avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVCcxjeRu4RSu8BKLk3jcovGhXAxPeYartF0pf',
         link: 'https://www.linkedin.com/in/madana-gopal-722a6920b/',
     },
-    {
-        name: 'Kishore G',
-        role: 'Marketing Manager',
-        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVqhk7IkfokGmCS6MdDsw8zQ1hZ2Tc7f5NLt4B',
-        link: '#',
-    },
-    {
-        name: 'Meera',
-        role: 'AI Influencer',
-        avatar: 'https://xvn33pi5ls.ufs.sh/f/7DZOY19EMyXVd4FRH0TKA7qnSZjpMR2ILHDa5WEOCb84UQm3',
-        link: 'https://www.instagram.com/meera.ai_myenum/',
-    },
 ]
 
 export default function TeamSection() {

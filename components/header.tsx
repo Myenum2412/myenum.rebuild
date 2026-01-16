@@ -10,7 +10,7 @@ import Image from 'next/image'
 const menuItems = [
   { name: 'Home', href: '/' },
   { name: 'BNI-Salem', href:'https://bni-salem.in/salem-bni-elite/en-IN/memberdetails?encryptedMemberId=VyR43%2BVKzpyWOMxTHyv88A%3D%3D&cmsv3=true&name=Amarnath+M+K'},
-  { name: 'About Us', href: '/undermaintenance' },
+  { name: 'About Us', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Our Product', href: '/product' },
   { name: 'Blog', href: '/undermaintenance' },
@@ -74,7 +74,7 @@ export const HeroHeader = () => {
             {/* Contact Us Button (Always Right Corner) */}
             <div className="hidden lg:block">
               <Button asChild size="sm">
-                <Link href="#contact">
+                <Link href="/contact">
                   <span>Contact Us</span>
                 </Link>
               </Button>
@@ -113,7 +113,7 @@ export const HeroHeader = () => {
                 {/* Contact Us (Mobile) */}
                 <div className="flex w-full">
                   <Button asChild size="sm" className="w-full">
-                    <Link href="#contact">
+                    <Link href="/contact">
                       <span>Contact Us</span>
                     </Link>
                   </Button>
