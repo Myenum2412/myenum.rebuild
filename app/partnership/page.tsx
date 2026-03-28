@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Footer from '@/components/footer';
 import FreshworksFeatures from '@/components/FreshworksFeatures';
 import FreshworksExpertise from '@/components/FreshworksExpertise';
 import FreshworksStats from '@/components/FreshworksStats';
@@ -148,7 +147,6 @@ export default function PartnershipPage() {
         secondaryButtonText="Book Implementation Call"
       />
 
-      <Footer />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import ContactPageForm from '@/components/ContactPageForm';
 import Faq3 from '@/components/mvpblocks/faq-3';
-import Footer from '@/components/footer';
 import type { Metadata } from 'next';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbList } from '@/components/ui/breadcrumb';
 import { BreadcrumbPage } from '@/components/ui/breadcrumb';
@@ -119,7 +118,6 @@ export default function ContactPage() {
         <div>
           <ContactPageForm />
           <Faq3 />
-          <Footer />
         </div>  
       </>
     );

@@ -1564,10 +1564,19 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  alternates: {
+    canonical: "https://www.myenum.in",
+    languages: {
+      "en-IN": "https://www.myenum.in",
+      "en-GB": "https://www.myenum.in",
+      "en-DE": "https://www.myenum.in",
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const schemaData = {
+  // Main Organization Schema
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "MyEnum Agency",
@@ -1585,11 +1594,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "@type": "PostalAddress",
       "addressCountry": "IN",
       "addressRegion": "Tamil Nadu",
-      "addressLocality": "Salem"
+      "addressLocality": "Salem",
+      "streetAddress": "Salem, Tamil Nadu"
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
+      "telephone": "+919042376479",
       "availableLanguage": ["English", "Tamil", "Hindi"]
     },
     "sameAs": [
@@ -1599,22 +1610,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "https://twitter.com/myenum"
     ],
     "areaServed": [
-      {
-        "@type": "Country",
-        "name": "India"
-      },
-      {
-        "@type": "Country",
-        "name": "United Arab Emirates"
-      },
-      {
-        "@type": "Country",
-        "name": "United States"
-      },
-      {
-        "@type": "Country",
-        "name": "United Kingdom"
-      }
+      { "@type": "Country", "name": "India" },
+      { "@type": "Country", "name": "United Arab Emirates" },
+      { "@type": "Country", "name": "United States" },
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Country", "name": "Germany" }
     ],
     "serviceType": [
       "Software Development",
@@ -1626,6 +1626,217 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ]
   };
 
+  // LocalBusiness Schema
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MyEnum Agency",
+    "image": "https://www.myenum.in/logo.png",
+    "url": "https://www.myenum.in",
+    "telephone": "+919042376479",
+    "email": "developer@myenum.in",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+      "addressRegion": "Tamil Nadu",
+      "addressLocality": "Salem"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "11.6643",
+      "longitude": "78.1460"
+    },
+    "openingHours": ["Mo-Fr 09:00-18:00"],
+    "priceRange": "$$",
+    "areaServed": [
+      { "@type": "State", "name": "Tamil Nadu" },
+      { "@type": "State", "name": "Kerala" },
+      { "@type": "State", "name": "Karnataka" },
+      { "@type": "Country", "name": "India" },
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Country", "name": "Germany" }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "11.6643",
+        "longitude": "78.1460"
+      },
+      "geoRadius": "500 km"
+    }
+  };
+
+  // Service Schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "position": 1,
+        "name": "Custom Software Development",
+        "description": "Enterprise-grade custom software solutions tailored to your business needs. Includes ERP, CRM, and business automation software.",
+        "provider": {
+          "@type": "Organization",
+          "name": "MyEnum Agency",
+          "url": "https://www.myenum.in"
+        },
+        "areaServed": ["IN", "UK", "DE", "US"],
+        "serviceType": "SoftwareDevelopment"
+      },
+      {
+        "@type": "Offer",
+        "position": 2,
+        "name": "Web Development",
+        "description": "Professional website and web application development using modern technologies like React, Next.js, Node.js, and more.",
+        "provider": {
+          "@type": "Organization",
+          "name": "MyEnum Agency",
+          "url": "https://www.myenum.in"
+        },
+        "areaServed": ["IN", "UK", "DE", "US"],
+        "serviceType": "WebDevelopment"
+      },
+      {
+        "@type": "Offer",
+        "position": 3,
+        "name": "Mobile App Development",
+        "description": "Native and cross-platform mobile app development for iOS and Android. Flutter, React Native, and native development.",
+        "provider": {
+          "@type": "Organization",
+          "name": "MyEnum Agency",
+          "url": "https://www.myenum.in"
+        },
+        "areaServed": ["IN", "UK", "DE", "US"],
+        "serviceType": "MobileApplicationDevelopment"
+      },
+      {
+        "@type": "Offer",
+        "position": 4,
+        "name": "Digital Marketing Services",
+        "description": "Comprehensive digital marketing including SEO, PPC, social media marketing, content marketing, and lead generation.",
+        "provider": {
+          "@type": "Organization",
+          "name": "MyEnum Agency",
+          "url": "https://www.myenum.in"
+        },
+        "areaServed": ["IN", "UK", "DE", "US"],
+        "serviceType": "DigitalMarketing"
+      },
+      {
+        "@type": "Offer",
+        "position": 5,
+        "name": "SaaS Product Development",
+        "description": "Build and launch your SaaS products with cloud-native architecture, subscription billing, and multi-tenancy support.",
+        "provider": {
+          "@type": "Organization",
+          "name": "MyEnum Agency",
+          "url": "https://www.myenum.in"
+        },
+        "areaServed": ["IN", "UK", "DE", "US"],
+        "serviceType": "SaaSDevelopment"
+      },
+      {
+        "@type": "Offer",
+        "position": 6,
+        "name": "E-commerce Solutions",
+        "description": "Full e-commerce development including Shopify, WooCommerce, Magento, and custom solutions with payment integration.",
+        "provider": {
+          "@type": "Organization",
+          "name": "MyEnum Agency",
+          "url": "https://www.myenum.in"
+        },
+        "areaServed": ["IN", "UK", "DE", "US"],
+        "serviceType": "EcommerceDevelopment"
+      }
+    ]
+  };
+
+  // FAQ Schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does MyEnum Agency offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MyEnum Agency offers comprehensive software development services including custom software development, web development, mobile app development, SaaS product development, e-commerce solutions, and digital marketing services."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you serve clients in Tamil Nadu and Kerala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we proudly serve clients across Tamil Nadu (including Chennai, Salem, Coimbatore, Madurai) and Kerala (including Kochi, Trivandrum, Calicut). We also offer on-site consultations in these regions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer services in UK and Germany?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide software development and digital marketing services to clients in the UK (including London, Manchester, Birmingham) and Germany (including Berlin, Munich, Frankfurt). We work with international clients remotely and can arrange on-site visits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to develop a custom software or website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Development timelines vary based on project complexity. A simple website takes 2-4 weeks, while complex custom software or mobile apps typically take 2-6 months. We provide detailed timelines after requirements gathering."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer digital marketing services for local businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in local SEO and digital marketing for businesses in Tamil Nadu, Kerala, and Karnataka. We help local businesses improve their online presence and generate leads."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your pricing structure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer flexible pricing models including project-based quotes, hourly rates, and dedicated team engagements. Contact us for a free consultation and customized quote based on your requirements."
+        }
+      }
+    ]
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.myenum.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.myenum.in/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://www.myenum.in/contact"
+      }
+    ]
+  };
+
+  const allSchemas = [organizationSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema];
+
   return (
     <html
       lang="en"
@@ -1634,13 +1845,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ClientLayout>{children}</ClientLayout>
 
-        {/* Schema.org JSON-LD */}
-        <Script
-          id="schema-org"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
+        {/* Schema.org JSON-LD - Multiple schemas */}
+        {allSchemas.map((schema, index) => (
+          <Script
+            key={`schema-${index}`}
+            id={`schema-org-${index}`}
+            type="application/ld+json"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
 
         {/* Microsoft Clarity */}
         <Script id="clarity" strategy="afterInteractive">

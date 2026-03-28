@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import React from "react";
-import Footer from "@/components/footer";
 import { Iphone15Pro } from "@/components/ui/iphone-15-pro";
 import { CheckCircle, Users, FileText, Activity } from "lucide-react";
 
@@ -569,7 +568,6 @@ export default function Page() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

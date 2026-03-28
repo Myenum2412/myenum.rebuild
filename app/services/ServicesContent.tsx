@@ -5,7 +5,6 @@ import { TextEffect } from '@/components/ui/text-effect';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { motion } from 'motion/react';
 import { Code, Palette, ShoppingCartIcon, Cloud, Settings, Shield } from 'lucide-react';
-import Footer from '@/components/footer';
 import VerticalTabs from '@/components/ui/vertical-tabs';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -348,7 +347,6 @@ export default function ServicesContent() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

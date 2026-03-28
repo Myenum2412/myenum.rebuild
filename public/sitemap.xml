@@ -59,4 +59,38 @@
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
+
+  <!-- Location Pages - India -->
+  <url>
+    <loc>https://www.myenum.in/tamil-nadu</loc>
+    <lastmod>2026-03-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.myenum.in/kerala</loc>
+    <lastmod>2026-03-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.myenum.in/karnataka</loc>
+    <lastmod>2026-03-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Location Pages - International -->
+  <url>
+    <loc>https://www.myenum.in/uk</loc>
+    <lastmod>2026-03-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.myenum.in/germany</loc>
+    <lastmod>2026-03-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>

@@ -1,5 +1,4 @@
 import AboutUs1 from '@/components/mvpblocks/about-us-1';
-import Footer from '@/components/footer';
 import type { Metadata } from 'next';
 import Feature3 from '@/components/mvpblocks/feature-3';
 
@@ -123,7 +122,6 @@ export default function AboutPage() {
       <div className='flex flex-col gap-10'>
         <AboutUs1 />
         <Feature3 />
-        <Footer />
       </div>
     </>
   );

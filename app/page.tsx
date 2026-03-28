@@ -1,6 +1,5 @@
 import SeoHead from '@/components/SeoHead';
 import Features from '@/components/features-12';
-import Footer from '@/components/footer';
 import { GlowingTable } from '@/components/GlowingTable';
 import HeroSection from '@/components/hero-section';
 import IntegrationsSection from '@/components/integrations-8';
@@ -313,7 +312,6 @@ export default function Home() {
         <IntegrationsSection />
         <TeamSection />
         <CTA2 />
-        <Footer />
       </main>
     </>
   );
