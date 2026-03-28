@@ -1,7 +1,77 @@
 // app/terms/page.tsx
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+
+export const metadata: Metadata = {
+  title: 'Terms and Conditions | Myenum Agency - Service Agreement',
+  description: 'Myenum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, confidentiality, and warranty policies for software and web development services.',
+  keywords: [
+    'terms and conditions',
+    'terms of service',
+    'service agreement',
+    'terms of use',
+    'terms',
+    'conditions',
+    'Myenum terms',
+    'service contract',
+    'payment terms',
+    'project terms',
+    'agreement',
+    'contract terms',
+    'legal terms',
+    'business terms',
+    'software development terms',
+    'web development terms',
+    'intellectual property',
+    'IP rights',
+    'confidentiality agreement',
+    'non-disclosure',
+    'NDA',
+    'payment policy',
+    'refund policy',
+    'cancellation policy',
+    'termination policy',
+    'warranty terms',
+    'support terms',
+    'liability terms',
+    'limitation of liability',
+    'governing law',
+    'jurisdiction',
+    'dispute resolution',
+    'amendments',
+    'updates',
+    'contact terms',
+    'legal agreement',
+    'client agreement',
+    'service provider terms',
+    'business agreement',
+  ],
+  openGraph: {
+    title: 'Terms and Conditions | Myenum Agency',
+    description: 'Myenum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, and warranty policies.',
+    url: 'https://www.myenum.in/terms',
+    siteName: 'Myenum Agency',
+    type: 'website',
+    images: [
+      {
+        url: 'https://www.myenum.in/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Myenum Agency Terms and Conditions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms and Conditions | Myenum Agency',
+    description: 'Myenum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, and warranty policies.',
+  },
+  alternates: {
+    canonical: 'https://www.myenum.in/terms',
+  },
+};
 
 export default function TermsAndConditions() {
   return (
