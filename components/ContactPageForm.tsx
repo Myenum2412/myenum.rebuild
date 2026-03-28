@@ -106,16 +106,16 @@ export default function ContactPageForm() {
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
     setFormData(prev => {
       const updated = { ...prev, [field]: value };
-      
+
       // When state changes, update districts and reset district selection
       if (field === 'state') {
         updated.district = '';
         setAvailableDistricts(indianStates[value] || []);
       }
-      
+
       return updated;
     });
-    
+
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
     }
@@ -313,7 +313,7 @@ export default function ContactPageForm() {
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     placeholder="Enter Name"
-                    className={cn('text-foreground', errors.name && 'border-destructive')}
+                    className={cn('bg-white text-black dark:bg-white dark:text-black', errors.name && 'border-destructive')}
                   />
                   {errors.name && (
                     <p className="mt-1 text-sm text-destructive">{errors.name}</p>
@@ -331,7 +331,7 @@ export default function ContactPageForm() {
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
                     placeholder="Enter Email"
-                    className={cn('text-foreground', errors.email && 'border-destructive')}
+                    className={cn('bg-white text-black dark:bg-white dark:text-black', errors.email && 'border-destructive')}
                   />
                   {errors.email && (
                     <p className="mt-1 text-sm text-destructive">{errors.email}</p>
@@ -351,16 +351,15 @@ export default function ContactPageForm() {
                     value={formData.service}
                     onChange={(e) => handleInputChange('service', e.target.value)}
                     className={cn(
-                      'flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs transition-colors text-foreground',
+                      'flex h-9 w-full rounded-md border border-input bg-white px-3 py-1 text-sm shadow-xs transition-colors text-black',
                       'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
                       'disabled:cursor-not-allowed disabled:opacity-50',
                       errors.service && 'border-destructive'
                     )}
-                    style={{ color: 'var(--foreground)' }}
                   >
-                    <option value="" style={{ backgroundColor: 'var(--background)', color: 'var(--muted-foreground)' }}>Select a service</option>
+                    <option value="" className="text-muted-foreground">Select a service</option>
                     {services.map((service) => (
-                      <option key={service} value={service} style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
+                      <option key={service} value={service} className="text-black">
                         {service}
                       </option>
                     ))}
@@ -381,7 +380,7 @@ export default function ContactPageForm() {
                       type="date"
                       value={formData.dateRange}
                       onChange={(e) => handleInputChange('dateRange', e.target.value)}
-                      className={cn('pr-10 text-foreground', errors.dateRange && 'border-destructive')}
+                      className={cn('pr-10 bg-white text-black dark:bg-white dark:text-black', errors.dateRange && 'border-destructive')}
                     />
                     <Calendar className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   </div>
@@ -403,16 +402,15 @@ export default function ContactPageForm() {
                     value={formData.state}
                     onChange={(e) => handleInputChange('state', e.target.value)}
                     className={cn(
-                      'flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs transition-colors text-foreground',
+                      'flex h-9 w-full rounded-md border border-input bg-white px-3 py-1 text-sm shadow-xs transition-colors text-black',
                       'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
                       'disabled:cursor-not-allowed disabled:opacity-50',
                       errors.state && 'border-destructive'
                     )}
-                    style={{ color: 'var(--foreground)' }}
                   >
-                    <option value="" style={{ backgroundColor: 'var(--background)', color: 'var(--muted-foreground)' }}>Select State</option>
+                    <option value="" className="text-muted-foreground">Select State</option>
                     {Object.keys(indianStates).map((state) => (
-                      <option key={state} value={state} style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
+                      <option key={state} value={state} className="text-black">
                         {state}
                       </option>
                     ))}
@@ -433,18 +431,17 @@ export default function ContactPageForm() {
                     onChange={(e) => handleInputChange('district', e.target.value)}
                     disabled={!formData.state || availableDistricts.length === 0}
                     className={cn(
-                      'flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs transition-colors text-foreground',
+                      'flex h-9 w-full rounded-md border border-input bg-white px-3 py-1 text-sm shadow-xs transition-colors text-black',
                       'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
                       'disabled:cursor-not-allowed disabled:opacity-50',
                       errors.district && 'border-destructive'
                     )}
-                    style={{ color: 'var(--foreground)' }}
                   >
-                    <option value="" style={{ backgroundColor: 'var(--background)', color: 'var(--muted-foreground)' }}>
+                    <option value="" className="text-muted-foreground">
                       {!formData.state ? 'Select State first' : 'Select District'}
                     </option>
                     {availableDistricts.map((district) => (
-                      <option key={district} value={district} style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
+                      <option key={district} value={district} className="text-black">
                         {district}
                       </option>
                     ))}
@@ -467,7 +464,7 @@ export default function ContactPageForm() {
                   rows={4}
                   placeholder="Enter Message"
                   className={cn(
-                    'flex min-h-[80px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-xs text-foreground',
+                    'flex min-h-[80px] w-full rounded-md border border-input bg-white px-3 py-2 text-sm shadow-xs text-black',
                     'placeholder:text-muted-foreground',
                     'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
                     'disabled:cursor-not-allowed disabled:opacity-50',

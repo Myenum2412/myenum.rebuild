@@ -42,7 +42,6 @@ const communityLinks = [
 
 const footerLinks = [
   { name: "Services", links: servicesLinks },
-  { name: "Product", links: productLinks },
   { name: "Quick Links", links: quickLinks },
 ];
 
@@ -52,16 +51,18 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-5 py-16 space-y-16">
         {/* Logo + Social Icons */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-800 pb-8">
-          <Link href="/" aria-label="go home" className="flex items-center gap-2">
-            <Image
-              src="/iconc.webp"
-              alt="logo"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <p className="text-2xl font-bold">MyEnum Agency</p>
-          </Link>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <Link href="/" aria-label="go home" className="flex items-center gap-2">
+              <Image
+                src="/iconc.webp"
+                alt="logo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <p className="text-2xl font-bold">MyEnum Agency</p>
+            </Link>
+          </div>
 
           <div className="flex gap-4 text-2xl">
             <Link
@@ -137,34 +138,47 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
 
-            <form className="mt-6 w-full max-w-xs">
-              <Label htmlFor="email" className="block text-sm font-medium mb-2">
-                Subscribe to our newsletter
-              </Label>
-              <div className="flex gap-2">
-                <Input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Your email"
-                  required
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Partnership</h3>
+            <Link href="/partnership" className="flex flex-col gap-3 group transition-opacity">
+              <span className="text-xs text-gray-400 font-medium group-hover:text-white transition-colors uppercase tracking-wider">Official Partner</span>
+              <div className="bg-white/5 p-4 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-white/10 transition-all group-hover:border-primary/30 w-fit backdrop-blur-sm">
+                <Image
+                  src="/image/freshworkslogo.svg"
+                  alt="Freshworks Partner"
+                  width={80}
+                  height={80}
+                  className="object-contain opacity-90 group-hover:opacity-100 transition-all shadow-sm"
                 />
-                <Button type="submit">Subscribe</Button>
               </div>
-            </form>
+            </Link>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 pt-4 text-gray-400 text-sm">
-          <span>&copy; {new Date().getFullYear()} MyEnum</span>
-          <Link
-            href="https://www.myenum.in"
-            className="hover:text-white underline transition-colors duration-150 mt-2 sm:mt-0"
-          >
-            All Rights Reserved
-          </Link>
+        <div className="mt-12 flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 pt-8 text-gray-500 text-xs tracking-wide">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-2 mb-4 sm:mb-0">
+            <span>&copy; {new Date().getFullYear()} MyEnum Agency</span>
+            <span className="hidden sm:block">|</span>
+            <span>All Rights Reserved</span>
+          </div>
+          
+          <div className="flex items-center gap-6">
+            <Link
+              href="/terms"
+              className="hover:text-white transition-colors duration-200"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-white transition-colors duration-200"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
