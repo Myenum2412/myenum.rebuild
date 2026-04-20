@@ -13,8 +13,8 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  MessageCircle,
 } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/logos';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 
@@ -255,7 +255,7 @@ export default function ContactPageForm() {
                       className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors"
                       aria-label="WhatsApp"
                     >
-                      <MessageCircle className="h-5 w-5" />
+                      <WhatsAppIcon className="h-5 w-5" />
                     </a>
                     <a
                       href="https://www.facebook.com/p/My-enum-61572140267076/"

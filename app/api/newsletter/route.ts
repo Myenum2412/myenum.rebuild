@@ -19,14 +19,10 @@ export async function POST(request: NextRequest) {
 
     // Check if environment variables are set
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-      console.error('Missing email credentials:', {
-        hasUser: !!process.env.EMAIL_USER,
-        hasPass: !!process.env.EMAIL_PASS
-      });
+      console.error('Missing email credentials');
       // Still return success to avoid showing errors to users
-      // but log internally
       return NextResponse.json(
-        { message: 'Subscribed successfully' },
+        { message: 'Lead captured successfully' },
         { status: 200 }
       );
     }
@@ -50,14 +46,16 @@ export async function POST(request: NextRequest) {
         .replace(/'/g, '&#039;');
     };
 
-    const source = validatedData.source || 'Newsletter Signup';
+    const isWhatsApp = validatedData.source === 'whatsapp_widget';
+    const sourceLabel = isWhatsApp ? 'WhatsApp Inquiry' : (validatedData.source || 'Newsletter Signup');
+    const accentColor = isWhatsApp ? '#10b981' : '#22c55e'; // Emerald for WhatsApp
 
-    // Email content for lead notification
+    // Email content
     const mailOptions = {
-      from: `"Myenum Website" <${process.env.EMAIL_USER}>`,
+      from: `"MyEnum Notification" <${process.env.EMAIL_USER}>`,
       to: 'developer@myenum.in',
       replyTo: validatedData.email,
-      subject: `New Newsletter Signup - ${source}`,
+      subject: `[Lead] ${sourceLabel} from ${validatedData.name || 'Visitor'}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -65,25 +63,48 @@ export async function POST(request: NextRequest) {
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">New Newsletter Signup</h1>
+        <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1a1a1a; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f7f6;">
+          <div style="background: linear-gradient(135deg, ${accentColor} 0%, #064e3b 100%); padding: 40px 20px; border-radius: 16px 16px 0 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h1 style="color: white; margin: 0; font-size: 28px; letter-spacing: 1px;">New Lead Captured</h1>
+            <p style="color: rgba(255,255,255,0.8); margin-top: 10px; font-size: 14px;">${sourceLabel}</p>
           </div>
-          <div style="background-color: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">
-            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-              <h2 style="color: #22c55e; margin-top: 0; border-bottom: 2px solid #22c55e; padding-bottom: 10px;">Subscriber Details</h2>
-              <p style="margin: 10px 0;"><strong style="color: #555;">Email:</strong> <a href="mailto:${escapeHtml(validatedData.email)}" style="color: #22c55e; text-decoration: none;">${escapeHtml(validatedData.email)}</a></p>
-              ${validatedData.name ? `<p style="margin: 10px 0;"><strong style="color: #555;">Name:</strong> <span style="color: #333;">${escapeHtml(validatedData.name)}</span></p>` : ''}
-              <p style="margin: 10px 0;"><strong style="color: #555;">Source:</strong> <span style="color: #333;">${escapeHtml(source)}</span></p>
-              ${validatedData.message ? `<p style="margin: 10px 0;"><strong style="color: #555;">Message:</strong> <span style="color: #333;">${escapeHtml(validatedData.message)}</span></p>` : ''}
+          
+          <div style="background-color: white; padding: 35px; border-radius: 0 0 16px 16px; border: 1px solid #e2e8f0; border-top: none; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
+            <div style="margin-bottom: 30px;">
+              <h2 style="color: ${accentColor}; font-size: 18px; margin-top: 0; border-bottom: 1px solid #edf2f7; padding-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">User Information</h2>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px; width: 100px;">Name:</td>
+                  <td style="padding: 8px 0; color: #1e293b; font-weight: 600;">${escapeHtml(validatedData.name || 'Not provided')}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px;">Email:</td>
+                  <td style="padding: 8px 0;"><a href="mailto:${validatedData.email}" style="color: ${accentColor}; text-decoration: none; font-weight: 600;">${escapeHtml(validatedData.email)}</a></td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px;">Source:</td>
+                  <td style="padding: 8px 0; color: #1e293b;"><span style="background-color: #f1f5f9; padding: 4px 8px; border-radius: 4px; font-size: 12px;">${escapeHtml(sourceLabel)}</span></td>
+                </tr>
+              </table>
+            </div>
+
+            ${validatedData.message ? `
+            <div style="margin-top: 30px;">
+              <h2 style="color: ${accentColor}; font-size: 18px; margin-top: 0; border-bottom: 1px solid #edf2f7; padding-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Message / Inquiry</h2>
+              <div style="background-color: #f8fafc; padding: 20px; border-radius: 12px; border-left: 4px solid ${accentColor}; margin-top: 15px;">
+                <p style="margin: 0; color: #334155; white-space: pre-wrap; font-style: italic;">"${escapeHtml(validatedData.message)}"</p>
+              </div>
+            </div>
+            ` : ''}
+
+            <div style="margin-top: 40px; text-align: center;">
+              <a href="mailto:${validatedData.email}" style="background-color: ${accentColor}; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-block; transition: all 0.3s ease;">Reply to Lead</a>
             </div>
           </div>
 
-          <div style="text-align: center; margin-top: 20px; padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
-            <p style="color: #666; font-size: 12px; margin: 0;">
-              This email was sent from MyEnum Agency website.<br>
-              Lead source: ${escapeHtml(source)}
-            </p>
+          <div style="text-align: center; margin-top: 30px; color: #94a3b8; font-size: 11px; letter-spacing: 0.5px;">
+            <p>© ${new Date().getFullYear()} MyEnum Agency Automation System</p>
+            <p>This is an automated notification from your website's interaction widget.</p>
           </div>
         </body>
         </html>
@@ -91,16 +112,15 @@ export async function POST(request: NextRequest) {
     };
 
     // Send email
-    const result = await transporter.sendMail(mailOptions);
-    console.log('Newsletter signup email sent:', result.messageId);
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
-      { message: 'Subscribed successfully', messageId: result.messageId },
+      { message: 'Lead captured and email sent' },
       { status: 200 }
     );
 
   } catch (error) {
-    console.error('Newsletter signup error:', error);
+    console.error('Newsletter/WhatsApp lead error:', error);
 
     if (error instanceof z.ZodError) {
       return NextResponse.json(
@@ -109,10 +129,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Still return success to avoid showing errors to users
     return NextResponse.json(
-      { message: 'Subscribed successfully' },
-      { status: 200 }
+      { message: 'Internal server error' },
+      { status: 500 }
     );
   }
 }

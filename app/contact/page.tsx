@@ -6,10 +6,10 @@ import { BreadcrumbPage } from '@/components/ui/breadcrumb';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Contact Myenum Agency | Get Free Consultation for Software & Digital Marketing',
-    description: 'Contact Myenum Agency for custom software development, web development, mobile apps, and digital marketing services. Get free consultation today! Reach us for projects in India, UAE, USA, UK, and globally.',
+    title: 'Contact MyEnum Agency | Get Free Consultation for Software & Digital Marketing',
+    description: 'Contact MyEnum Agency for custom software development, web development, mobile apps, and digital marketing services. Get free consultation today! Reach us for projects in India, UAE, USA, UK, and globally.',
     keywords: [
-        'contact Myenum Agency',
+        'contact MyEnum Agency',
         'contact software company',
         'get in touch',
         'contact form',
@@ -50,27 +50,27 @@ export const metadata: Metadata = {
         'help contact',
     ],
     openGraph: {
-        title: 'Contact Myenum Agency | Get Free Consultation',
-        description: 'Contact Myenum Agency for custom software development, web development, mobile apps, and digital marketing services. Get free consultation today!',
-        url: 'https://www.myenum.in/contact',
-        siteName: 'Myenum Agency',
+        title: 'Contact MyEnum Agency | Get Free Consultation',
+        description: 'Contact MyEnum Agency for custom software development, web development, mobile apps, and digital marketing services. Get free consultation today!',
+        url: 'https://myenum.in/contact',
+        siteName: 'MyEnum Agency',
         type: 'website',
         images: [
             {
-                url: 'https://www.myenum.in/og-image.png',
+                url: '/iconc.webp',
                 width: 1200,
                 height: 630,
-                alt: 'Contact Myenum Agency',
+                alt: 'Contact MyEnum Agency',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Contact Myenum Agency | Get Free Consultation',
-        description: 'Contact Myenum Agency for custom software development, web development, mobile apps, and digital marketing services.',
+        title: 'Contact MyEnum Agency | Get Free Consultation',
+        description: 'Contact MyEnum Agency for custom software development, web development, mobile apps, and digital marketing services.',
     },
     alternates: {
-        canonical: 'https://www.myenum.in/contact',
+        canonical: 'https://myenum.in/contact',
     },
 };
 
@@ -89,7 +89,7 @@ export default function ContactPage() {
                   </BreadcrumbItem>
                   <BreadcrumbSeparator   />
                   <BreadcrumbItem>
-                    <BreadcrumbPage>Get in touch with Myenum Agency</BreadcrumbPage>
+                    <BreadcrumbPage>Get in touch with MyEnum Agency</BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
@@ -108,7 +108,7 @@ export default function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Myenum Agency Location"
+                title="MyEnum Agency Location"
                 className="w-full h-full"
               />
             </div>

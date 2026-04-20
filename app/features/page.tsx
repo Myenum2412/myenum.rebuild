@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Features from '@/components/features-3';
 
 export const metadata: Metadata = {
-  title: 'Features & Services - Myenum Agency | Software, Web & Digital Solutions',
-  description: 'Discover Myenum Agency\'s powerful features and capabilities. Custom software development, responsive websites, mobile apps, SaaS products, and comprehensive digital marketing services. View all features!',
+  title: 'Features & Services - MyEnum Agency | Software, Web & Digital Solutions',
+  description: 'Discover MyEnum Agency\'s powerful features and capabilities. Custom software development, responsive websites, mobile apps, SaaS products, and comprehensive digital marketing services. View all features!',
   keywords: [
     'Myenum features',
     'software features',
@@ -45,27 +45,27 @@ export const metadata: Metadata = {
     'consulting features',
   ],
   openGraph: {
-    title: 'Features & Services - Myenum Agency',
-    description: 'Discover Myenum Agency\'s powerful features and capabilities. Custom software, websites, mobile apps, and digital marketing services.',
-    url: 'https://www.myenum.in/features',
-    siteName: 'Myenum Agency',
+    title: 'Features & Services - MyEnum Agency',
+    description: 'Discover MyEnum Agency\'s powerful features and capabilities. Custom software, websites, mobile apps, and digital marketing services.',
+    url: 'https://myenum.in/features',
+    siteName: 'MyEnum Agency',
     type: 'website',
     images: [
       {
-        url: 'https://www.myenum.in/og-image.png',
+        url: '/iconc.webp',
         width: 1200,
         height: 630,
-        alt: 'Myenum Agency Features & Services',
+        alt: 'MyEnum Agency Features & Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Features & Services - Myenum Agency',
-    description: 'Discover Myenum Agency\'s powerful features and capabilities. Custom software, websites, mobile apps, and digital marketing.',
+    title: 'Features & Services - MyEnum Agency',
+    description: 'Discover MyEnum Agency\'s powerful features and capabilities. Custom software, websites, mobile apps, and digital marketing.',
   },
   alternates: {
-    canonical: 'https://www.myenum.in/features',
+    canonical: 'https://myenum.in/features',
   },
 };
 

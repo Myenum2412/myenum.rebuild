@@ -12,4 +12,4 @@ Disallow: /undermaintenance
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://www.myenum.in/sitemap.xml
+Sitemap: https://myenum.in/sitemap.xml

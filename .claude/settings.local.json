@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://myenum.in/tamil-nadu)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://myenum.in/)"
     ]
   }
 }

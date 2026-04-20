@@ -9,8 +9,8 @@ import CTA2 from '@/components/mvpblocks/cta-2';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Partnership Program | Myenum Agency - Become a Partner for Software & Digital Solutions',
-  description: 'Partner with Myenum Agency for complete business solutions, software development, and digital marketing. Join our partnership program for mutual growth. Freshworks Partner. India, UAE, USA, Global partners welcome.',
+  title: 'Partnership Program | MyEnum Agency - Become a Partner for Software & Digital Solutions',
+  description: 'Partner with MyEnum Agency for complete business solutions, software development, and digital marketing. Join our partnership program for mutual growth. Freshworks Partner. India, UAE, USA, Global partners welcome.',
   keywords: [
     'partnership',
     'partnership program',
@@ -73,27 +73,27 @@ export const metadata: Metadata = {
     'strategic alliance',
   ],
   openGraph: {
-    title: 'Partnership Program | Myenum Agency',
-    description: 'Partner with Myenum Agency for complete business solutions, software development, and digital marketing. Join our partnership program.',
-    url: 'https://www.myenum.in/partnership',
-    siteName: 'Myenum Agency',
+    title: 'Partnership Program | MyEnum Agency',
+    description: 'Partner with MyEnum Agency for complete business solutions, software development, and digital marketing. Join our partnership program.',
+    url: 'https://myenum.in/partnership',
+    siteName: 'MyEnum Agency',
     type: 'website',
     images: [
       {
-        url: 'https://www.myenum.in/og-image.png',
+        url: '/iconc.webp',
         width: 1200,
         height: 630,
-        alt: 'Myenum Agency Partnership Program',
+        alt: 'MyEnum Agency Partnership Program',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Partnership Program | Myenum Agency',
-    description: 'Partner with Myenum Agency for complete business solutions, software development, and digital marketing.',
+    title: 'Partnership Program | MyEnum Agency',
+    description: 'Partner with MyEnum Agency for complete business solutions, software development, and digital marketing.',
   },
   alternates: {
-    canonical: 'https://www.myenum.in/partnership',
+    canonical: 'https://myenum.in/partnership',
   },
 };
 
@@ -142,7 +142,7 @@ export default function PartnershipPage() {
 
       <CTA2 
         title="Ready to transform your customer experience?" 
-        description="Let's discuss how Myenum Agency and Freshworks can elevate your business operations and delight your customers." 
+        description="Let's discuss how MyEnum Agency and Freshworks can elevate your business operations and delight your customers." 
         primaryButtonText="Get in Touch"
         secondaryButtonText="Book Implementation Call"
       />

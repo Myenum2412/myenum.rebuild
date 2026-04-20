@@ -9,6 +9,7 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const jetbrainsMono = JetBrains_Mono({ variable: "--font-jetbrains-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://myenum.in'),
   title: "MyEnum Agency | Best Software Development Company India & Global",
   description:
     "Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally. 500+ projects delivered. Get free quote today!",
@@ -1533,11 +1534,11 @@ export const metadata: Metadata = {
     title: "MyEnum Agency | Best Software Development Company India & Global",
     description:
       "Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally. 500+ projects delivered.",
-    url: "https://www.myenum.in",
+    url: "https://myenum.in",
     siteName: "MyEnum Agency",
     images: [
       {
-        url: "https://www.myenum.in/og-image.png",
+        url: "/iconc.webp",
         width: 1200,
         height: 630,
         alt: "MyEnum Agency - Software Development & Digital Marketing",
@@ -1551,7 +1552,7 @@ export const metadata: Metadata = {
     title: "MyEnum Agency | Best Software Development Company India & Global",
     description:
       "Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally.",
-    images: ["https://www.myenum.in/og-image.png"],
+    images: ["/iconc.webp"],
   },
   robots: {
     index: true,
@@ -1565,11 +1566,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.myenum.in",
+    canonical: "https://myenum.in",
     languages: {
-      "en-IN": "https://www.myenum.in",
-      "en-GB": "https://www.myenum.in",
-      "en-DE": "https://www.myenum.in",
+      "en-IN": "https://myenum.in",
+      "en-GB": "https://myenum.in",
+      "en-DE": "https://myenum.in",
     },
   },
 };
@@ -1581,8 +1582,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "Organization",
     "name": "MyEnum Agency",
     "alternateName": "MyEnum Digital Agency",
-    "url": "https://www.myenum.in",
-    "logo": "https://www.myenum.in/logo.png",
+    "url": "https://myenum.in",
+    "logo": "https://myenum.in/iconc.webp",
     "description": "Premium software development and digital marketing agency in India. Specializing in custom software, SaaS products, web development, and digital marketing services.",
     "foundingDate": "2020",
     "numberOfEmployees": {
@@ -1604,10 +1605,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "availableLanguage": ["English", "Tamil", "Hindi"]
     },
     "sameAs": [
-      "https://www.facebook.com/myenum",
-      "https://www.linkedin.com/company/myenum",
-      "https://www.instagram.com/myenum",
-      "https://twitter.com/myenum"
+      "https://www.facebook.com/p/My-enum-61572140267076/",
+      "https://www.instagram.com/myenum.in/",
+      "https://in.linkedin.com/company/myenum-am"
     ],
     "areaServed": [
       { "@type": "Country", "name": "India" },
@@ -1631,8 +1631,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "MyEnum Agency",
-    "image": "https://www.myenum.in/logo.png",
-    "url": "https://www.myenum.in",
+    "image": "https://myenum.in/iconc.webp",
+    "url": "https://myenum.in",
     "telephone": "+919042376479",
     "email": "developer@myenum.in",
     "address": {
@@ -1680,7 +1680,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "provider": {
           "@type": "Organization",
           "name": "MyEnum Agency",
-          "url": "https://www.myenum.in"
+          "url": "https://myenum.in"
         },
         "areaServed": ["IN", "UK", "DE", "US"],
         "serviceType": "SoftwareDevelopment"
@@ -1693,7 +1693,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "provider": {
           "@type": "Organization",
           "name": "MyEnum Agency",
-          "url": "https://www.myenum.in"
+          "url": "https://myenum.in"
         },
         "areaServed": ["IN", "UK", "DE", "US"],
         "serviceType": "WebDevelopment"
@@ -1706,7 +1706,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "provider": {
           "@type": "Organization",
           "name": "MyEnum Agency",
-          "url": "https://www.myenum.in"
+          "url": "https://myenum.in"
         },
         "areaServed": ["IN", "UK", "DE", "US"],
         "serviceType": "MobileApplicationDevelopment"
@@ -1719,7 +1719,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "provider": {
           "@type": "Organization",
           "name": "MyEnum Agency",
-          "url": "https://www.myenum.in"
+          "url": "https://myenum.in"
         },
         "areaServed": ["IN", "UK", "DE", "US"],
         "serviceType": "DigitalMarketing"
@@ -1732,7 +1732,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "provider": {
           "@type": "Organization",
           "name": "MyEnum Agency",
-          "url": "https://www.myenum.in"
+          "url": "https://myenum.in"
         },
         "areaServed": ["IN", "UK", "DE", "US"],
         "serviceType": "SaaSDevelopment"
@@ -1745,7 +1745,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "provider": {
           "@type": "Organization",
           "name": "MyEnum Agency",
-          "url": "https://www.myenum.in"
+          "url": "https://myenum.in"
         },
         "areaServed": ["IN", "UK", "DE", "US"],
         "serviceType": "EcommerceDevelopment"
@@ -1818,19 +1818,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.myenum.in/"
+        "item": "https://myenum.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://www.myenum.in/services"
+        "item": "https://myenum.in/services"
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "name": "Contact",
-        "item": "https://www.myenum.in/contact"
+        "item": "https://myenum.in/contact"
       }
     ]
   };

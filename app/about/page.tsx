@@ -3,10 +3,10 @@ import type { Metadata } from 'next';
 import Feature3 from '@/components/mvpblocks/feature-3';
 
 export const metadata: Metadata = {
-  title: 'About Us | Myenum Agency - Trusted Software & Digital Marketing Company India',
-  description: 'Learn about Myenum Agency - your trusted partner for software development, web development, mobile apps, SaaS products, and digital marketing solutions. 500+ projects delivered globally. Complete business solutions under one roof.',
+  title: 'About Us | MyEnum Agency - Trusted Software & Digital Marketing Company India',
+  description: 'Learn about MyEnum Agency - your trusted partner for software development, web development, mobile apps, SaaS products, and digital marketing solutions. 500+ projects delivered globally. Complete business solutions under one roof.',
   keywords: [
-    'about Myenum Agency',
+    'about MyEnum Agency',
     'about Myenum',
     'about us',
     'software development company',
@@ -92,27 +92,27 @@ export const metadata: Metadata = {
     'CMMI certified',
   ],
   openGraph: {
-    title: 'About Us | Myenum Agency',
-    description: 'Learn about Myenum Agency - your trusted partner for software development, web development, mobile apps, and digital marketing solutions.',
-    url: 'https://www.myenum.in/about',
-    siteName: 'Myenum Agency',
+    title: 'About Us | MyEnum Agency',
+    description: 'Learn about MyEnum Agency - your trusted partner for software development, web development, mobile apps, and digital marketing solutions.',
+    url: 'https://myenum.in/about',
+    siteName: 'MyEnum Agency',
     type: 'website',
     images: [
       {
-        url: 'https://www.myenum.in/og-image.png',
+        url: '/iconc.webp',
         width: 1200,
         height: 630,
-        alt: 'About Myenum Agency - Software & Digital Solutions',
+        alt: 'About MyEnum Agency - Software & Digital Solutions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us | Myenum Agency',
-    description: 'Learn about Myenum Agency - your trusted partner for software development, web development, mobile apps, and digital marketing solutions.',
+    title: 'About Us | MyEnum Agency',
+    description: 'Learn about MyEnum Agency - your trusted partner for software development, web development, mobile apps, and digital marketing solutions.',
   },
   alternates: {
-    canonical: 'https://www.myenum.in/about',
+    canonical: 'https://myenum.in/about',
   },
 };
 

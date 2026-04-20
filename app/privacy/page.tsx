@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import PrivacyPolicyContent from '@/components/PrivacyPolicyContent';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Myenum Agency - Data Protection & Privacy Statement',
-  description: 'Myenum Agency Privacy Policy. Learn how we collect, use, store, and protect your personal information. We are committed to data protection and privacy compliance.',
+  title: 'Privacy Policy | MyEnum Agency - Data Protection & Privacy Statement',
+  description: 'MyEnum Agency Privacy Policy. Learn how we collect, use, store, and protect your personal information. We are committed to data protection and privacy compliance.',
   keywords: [
     'privacy policy',
     'data protection',
@@ -46,27 +46,27 @@ export const metadata: Metadata = {
     'privacy for business',
   ],
   openGraph: {
-    title: 'Privacy Policy | Myenum Agency',
-    description: 'Myenum Agency Privacy Policy. Learn how we collect, use, store, and protect your personal information.',
-    url: 'https://www.myenum.in/privacy',
-    siteName: 'Myenum Agency',
+    title: 'Privacy Policy | MyEnum Agency',
+    description: 'MyEnum Agency Privacy Policy. Learn how we collect, use, store, and protect your personal information.',
+    url: 'https://myenum.in/privacy',
+    siteName: 'MyEnum Agency',
     type: 'website',
     images: [
       {
-        url: 'https://www.myenum.in/og-image.png',
+        url: '/iconc.webp',
         width: 1200,
         height: 630,
-        alt: 'Myenum Agency Privacy Policy',
+        alt: 'MyEnum Agency Privacy Policy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy | Myenum Agency',
-    description: 'Myenum Agency Privacy Policy. Learn how we collect, use, store, and protect your personal information.',
+    title: 'Privacy Policy | MyEnum Agency',
+    description: 'MyEnum Agency Privacy Policy. Learn how we collect, use, store, and protect your personal information.',
   },
   alternates: {
-    canonical: 'https://www.myenum.in/privacy',
+    canonical: 'https://myenum.in/privacy',
   },
 };
 

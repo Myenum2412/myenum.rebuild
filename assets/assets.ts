@@ -10,7 +10,7 @@ export const testimonials = [
     quote:
       "Radisson Hotel offers modern comfort with elegant rooms, an outdoor pool, free Wi-Fi, and versatile event spaces. Guests love our exceptional service and diverse dining at The Great Kebab Factory and Tangerine. With a 4.7 Tripadvisor rating, we are known for our cleanliness, food quality, and warm hospitality.",
     name: "Radisson Hotel Salem",
-    designation: "www.radissonhotels.com/en-us/hotels/radisson-salem",
+    designation: "https://www.radissonhotels.com/en-us/hotels/radisson-salem",
     src: "https://qsuv73ya7y.ufs.sh/f/fNtsXLDRapsOCEa9zms2lohb8qVB6kJn1QEZuFMXYKexv0yN",
   },
   {
@@ -31,21 +31,21 @@ export const testimonials = [
     quote:
     "Startup Newgen is a global, innovative enterprise delivering safe, secure, and professional packing solutions across B2B and C2C sectors, with a commitment to quality, client satisfaction, and a strong presence in countries worldwide.",
     name: "Air Winch International Courie and Cargo",
-    designation: "airwinchinternational.com",
+    designation: "https://airwinchinternational.com",
     src: "https://qsuv73ya7y.ufs.sh/f/fNtsXLDRapsO1xdpJONcY7IXn054ujZxJdN8PvKpEkbMFRwC",
   },
   {
     quote: 
     "Sivaraj is a luxury hotel in Salem offering exceptional service, rich heritage, and premium comfort near the bus stand and railway station",
     name: "Sivarajinn",
-    designation: "sivarajinn.com",
+    designation: "https://sivarajinn.com",
     src: "https://qsuv73ya7y.ufs.sh/f/fNtsXLDRapsOpMA6GwFTJaBvW0UrV4FlS9dCcNzD8oxZfPRY",
   },
   {
     quote:
     "They provide exceptional dental care, led by award-winning Dr. MohanBabu, specializing in Root Canal and Cosmetic Dentistry with advanced Microscope Enhanced Treatments—ranked among Salem’s top 3 clinics since 2019.",
     name: "VAIRAM DENTAL CARE",
-    designation: "vairamdentalcare.whitecoats.com",
+    designation: "https://vairamdentalcare.whitecoats.com",
     src: "https://qsuv73ya7y.ufs.sh/f/fNtsXLDRapsOPgaU0ObVvcxUOXS6fuZMJkGqlbwFDKhgjzEr",
   },
 ]

@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 const menuItems = [
   { name: 'Home', href: '/' },
-  { name: 'BNI-Salem', href:'https://bni-salem.in/salem-bni-elite/en-IN/memberdetails?encryptedMemberId=VyR43%2BVKzpyWOMxTHyv88A%3D%3D&cmsv3=true&name=Amarnath+M+K'},
+  { name: 'BNI-Salem', href: 'https://bni-salem.in/salem-bni-elite/en-IN/memberdetails?encryptedMemberId=G692iL9wFeF033rCMHtOzQ%3D%3D&cmsv3=true&name=Amarnath+MK' },
   { name: 'About Us', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Our Product', href: '/product' },
@@ -34,7 +34,7 @@ export const HeroHeader = () => {
           className={cn(
             'mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12',
             isScrolled &&
-              'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5'
+            'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5'
           )}
         >
           <div className="relative flex items-center justify-between gap-6 py-3 lg:py-4">
@@ -52,7 +52,7 @@ export const HeroHeader = () => {
                   height={32}
                   className="rounded-full"
                 />
-                <span className="font-semibold text-lg">Myenum</span>
+                <span className="font-semibold text-lg">MyEnum</span>
               </Link>
             </div>
 

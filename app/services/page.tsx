@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ServicesContent from './ServicesContent';
 
 export const metadata: Metadata = {
-  title: 'Services | Myenum Agency - Software Development, Web & Digital Marketing Services',
+  title: 'Services | MyEnum Agency - Software Development, Web & Digital Marketing Services',
   description: "Explore Myenum's professional services: custom software development, web development, mobile app development, SaaS products, e-commerce solutions, and digital marketing services. 500+ projects delivered globally.",
   keywords: [
     'Myenum services',
@@ -245,13 +245,13 @@ export const metadata: Metadata = {
     'international clients',
   ],
   openGraph: {
-    title: 'Services | Myenum Agency - Software Development, Web & Digital Marketing',
+    title: 'Services | MyEnum Agency - Software Development, Web & Digital Marketing',
     description: "Explore Myenum's professional services: custom software development, web development, mobile apps, SaaS products, e-commerce solutions, and digital marketing.",
-    url: 'https://www.myenum.in/services',
-    siteName: 'Myenum Agency',
+    url: 'https://myenum.in/services',
+    siteName: 'MyEnum Agency',
     images: [
       {
-        url: 'https://www.myenum.in/og-image.png',
+        url: '/iconc.webp',
         width: 1200,
         height: 630,
         alt: 'Myenum Services - Professional Software Development',
@@ -262,11 +262,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Services | Myenum Agency - Software Development, Web & Digital Marketing',
+    title: 'Services | MyEnum Agency - Software Development, Web & Digital Marketing',
     description: "Explore Myenum's professional services: custom software development, web development, mobile apps, SaaS products, e-commerce solutions, and digital marketing.",
   },
   alternates: {
-    canonical: 'https://www.myenum.in/services',
+    canonical: 'https://myenum.in/services',
   },
   robots: {
     index: true,

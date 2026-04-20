@@ -29,8 +29,8 @@ const SeoHead: React.FC<SeoHeadProps> = ({ title, description, keywords, canonic
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Myenum Agency",
-          "url": "https://www.myenum.in/",
+          "name": "MyEnum Agency",
+          "url": "https://myenum.in/",
           "logo": "https://myenum.in/iconc.webp",
           "contactPoint": {
             "@type": "ContactPoint",
@@ -41,7 +41,7 @@ const SeoHead: React.FC<SeoHeadProps> = ({ title, description, keywords, canonic
           "sameAs": [
             "https://www.facebook.com/p/My-enum-61572140267076/",
             "https://www.instagram.com/myenum.in/",
-            "https://www.linkedin.com/company/myenum-am",
+            "https://in.linkedin.com/company/myenum-am"
           ]
         })
       }}

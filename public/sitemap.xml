@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage - Highest Priority -->
   <url>
-    <loc>https://www.myenum.in/</loc>
+    <loc>https://myenum.in/</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
@@ -10,37 +10,37 @@
 
   <!-- Main Pages -->
   <url>
-    <loc>https://www.myenum.in/about</loc>
+    <loc>https://myenum.in/about</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/services</loc>
+    <loc>https://myenum.in/services</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/product</loc>
+    <loc>https://myenum.in/product</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/features</loc>
+    <loc>https://myenum.in/features</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/contact</loc>
+    <loc>https://myenum.in/contact</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/partnership</loc>
+    <loc>https://myenum.in/partnership</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
@@ -48,13 +48,13 @@
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://www.myenum.in/privacy</loc>
+    <loc>https://myenum.in/privacy</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/terms</loc>
+    <loc>https://myenum.in/terms</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
@@ -62,19 +62,19 @@
 
   <!-- Location Pages - India -->
   <url>
-    <loc>https://www.myenum.in/tamil-nadu</loc>
+    <loc>https://myenum.in/tamil-nadu</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/kerala</loc>
+    <loc>https://myenum.in/kerala</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/karnataka</loc>
+    <loc>https://myenum.in/karnataka</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
@@ -82,13 +82,13 @@
 
   <!-- Location Pages - International -->
   <url>
-    <loc>https://www.myenum.in/uk</loc>
+    <loc>https://myenum.in/uk</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.myenum.in/germany</loc>
+    <loc>https://myenum.in/germany</loc>
     <lastmod>2026-03-28</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>

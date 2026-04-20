@@ -9,7 +9,8 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 
 // Correct lucide-react imports
-import { Facebook, Instagram, Mail, MessageCircle, Send, CheckCircle2 } from "lucide-react";
+import { Facebook, Instagram, Mail, Send, CheckCircle2 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/logos";
 
 const servicesLinks = [
   { href: "/undermaintenance", label: "Web Development" },
@@ -79,49 +80,6 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white rounded-3xl border border-gray-800">
       <div className="mx-auto max-w-5xl px-5 py-16 space-y-16">
-        {/* Newsletter Section */}
-        <div className="bg-gradient-to-r from-slate-800 to-slate-900 border border-white/10 rounded-2xl p-6 sm:p-8">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-            <div className="lg:w-1/2">
-              <h3 className="text-xl sm:text-2xl font-bold mb-2">Stay Updated</h3>
-              <p className="text-gray-400 text-sm">
-                Get the latest insights on software development, digital marketing, and tech trends delivered to your inbox.
-              </p>
-            </div>
-            <div className="lg:w-1/2">
-              {isSubscribed ? (
-                <div className="flex items-center gap-3 text-green-400 bg-green-500/10 p-4 rounded-xl">
-                  <CheckCircle2 className="w-6 h-6" />
-                  <span className="font-medium">Thanks for subscribing!</span>
-                </div>
-              ) : (
-                <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500 flex-1"
-                    required
-                  />
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white whitespace-nowrap"
-                  >
-                    {isSubmitting ? (
-                      <span className="animate-spin">⟳</span>
-                    ) : (
-                      <span className="flex items-center gap-2">
-                        Subscribe <Send className="w-4 h-4" />
-                      </span>
-                    )}
-                  </Button>
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
 
         {/* Logo + Social Icons */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-800 pb-8">
@@ -164,7 +122,7 @@ export default function Footer() {
               aria-label="WhatsApp"
               className="hover:text-green-500 transition-colors duration-150"
             >
-              <MessageCircle />
+              <WhatsAppIcon />
             </Link>
             <Link
               href="mailto:developer@myenum.in"
@@ -238,7 +196,7 @@ export default function Footer() {
             <span className="hidden sm:block">|</span>
             <span>All Rights Reserved</span>
           </div>
-          
+
           <div className="flex items-center gap-6">
             <Link
               href="/terms"

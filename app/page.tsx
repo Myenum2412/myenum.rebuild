@@ -9,10 +9,10 @@ import CTA2 from '@/components/mvpblocks/cta-2';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Myenum Agency | Best Software Development Company India & Global',
-  description: 'Transform your digital presence with Myenum Agency. Expert software development, custom websites, mobile apps, SaaS products, and digital marketing services. 500+ projects delivered globally. Get free quote today!',
+  title: 'MyEnum Agency | Best Software Development Company India & Global',
+  description: 'Transform your digital presence with MyEnum Agency. Expert software development, custom websites, mobile apps, SaaS products, and digital marketing services. 500+ projects delivered globally. Get free quote today!',
   keywords: [
-    'Myenum Agency',
+    'MyEnum Agency',
     'software development',
     'website development',
     'digital marketing',
@@ -258,16 +258,16 @@ export const metadata: Metadata = {
     'team collaboration',
   ],
   openGraph: {
-    title: 'Myenum Agency | Best Software Development Company India & Global',
-    description: 'Transform your digital presence with Myenum Agency. Expert software development, custom websites, mobile apps, SaaS products, and digital marketing services.',
-    url: 'https://www.myenum.in/',
-    siteName: 'Myenum Agency',
+    title: 'MyEnum Agency | Best Software Development Company India & Global',
+    description: 'Transform your digital presence with MyEnum Agency. Expert software development, custom websites, mobile apps, SaaS products, and digital marketing services.',
+    url: 'https://myenum.in/',
+    siteName: 'MyEnum Agency',
     images: [
       {
-        url: 'https://www.myenum.in/og-image.png',
+        url: '/iconc.webp',
         width: 1200,
         height: 630,
-        alt: 'Myenum Agency - Software Development & Digital Marketing',
+        alt: 'MyEnum Agency - Software Development & Digital Marketing',
       },
     ],
     locale: 'en_IN',
@@ -275,11 +275,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Myenum Agency | Best Software Development Company India & Global',
-    description: 'Transform your digital presence with Myenum Agency. Expert software development, custom websites, mobile apps, SaaS products, and digital marketing services.',
+    title: 'MyEnum Agency | Best Software Development Company India & Global',
+    description: 'Transform your digital presence with MyEnum Agency. Expert software development, custom websites, mobile apps, SaaS products, and digital marketing services.',
   },
   alternates: {
-    canonical: 'https://www.myenum.in/',
+    canonical: 'https://myenum.in/',
   },
   robots: {
     index: true,
@@ -298,10 +298,10 @@ export default function Home() {
   return (
     <>
       <SeoHead
-        title="Myenum Agency - Advanced SaaS Solutions & Software Development"
-        description="Myenum Agency offers advanced SaaS solutions, custom software development, and digital transformation services for businesses. Contact us today!"
-        keywords="SaaS solutions, software development, Myenum Agency, digital transformation, business solutions, web app development"
-        canonicalUrl="https://www.myenum.in/"
+        title="MyEnum Agency - Advanced SaaS Solutions & Software Development"
+        description="MyEnum Agency offers advanced SaaS solutions, custom software development, and digital transformation services for businesses. Contact us today!"
+        keywords="SaaS solutions, software development, MyEnum Agency, digital transformation, business solutions, web app development"
+        canonicalUrl="https://myenum.in/"
       />
 
       <main className="overflow-hidden">

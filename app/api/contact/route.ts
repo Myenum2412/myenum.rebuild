@@ -67,12 +67,11 @@ export async function POST(request: NextRequest) {
         .replace(/'/g, '&#039;');
     };
 
-    // Email content
     const mailOptions = {
-      from: `"Myenum Website" <${process.env.EMAIL_USER}>`,
+      from: `"MyEnum Website" <${process.env.EMAIL_USER}>`,
       to: 'developer@myenum.in',
       replyTo: validatedData.email,
-      subject: `New Contact Form Submission - ${validatedData.service || 'General Inquiry'}`,
+      subject: `[Lead] Contact Form: ${validatedData.service || 'Inquiry'} from ${validatedData.name}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -80,38 +79,68 @@ export async function POST(request: NextRequest) {
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">New Contact Form Submission</h1>
-          </div>
-          <div style="background-color: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">
-            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-              <h2 style="color: #667eea; margin-top: 0; border-bottom: 2px solid #667eea; padding-bottom: 10px;">Contact Information</h2>
-              <p style="margin: 10px 0;"><strong style="color: #555;">Name:</strong> <span style="color: #333;">${escapeHtml(validatedData.name)}</span></p>
-              <p style="margin: 10px 0;"><strong style="color: #555;">Email:</strong> <a href="mailto:${escapeHtml(validatedData.email)}" style="color: #667eea; text-decoration: none;">${escapeHtml(validatedData.email)}</a></p>
-              ${validatedData.phone ? `<p style="margin: 10px 0;"><strong style="color: #555;">Phone:</strong> <a href="tel:${escapeHtml(validatedData.phone)}" style="color: #667eea; text-decoration: none;">${escapeHtml(validatedData.phone)}</a></p>` : ''}
-            </div>
-            
-            <div style="background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-              <h2 style="color: #667eea; margin-top: 0; border-bottom: 2px solid #667eea; padding-bottom: 10px;">Service Details</h2>
-              <p style="margin: 10px 0;"><strong style="color: #555;">Service:</strong> <span style="color: #333;">${escapeHtml(validatedData.service || 'Not specified')}</span></p>
-              ${validatedData.dateRange ? `<p style="margin: 10px 0;"><strong style="color: #555;">Preferred Date:</strong> <span style="color: #333;">${escapeHtml(validatedData.dateRange)}</span></p>` : ''}
-              <p style="margin: 10px 0;"><strong style="color: #555;">Location:</strong> <span style="color: #333;">${escapeHtml(validatedData.district)}, ${escapeHtml(validatedData.state)}</span></p>
-            </div>
-            
-            <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-              <h2 style="color: #667eea; margin-top: 0; border-bottom: 2px solid #667eea; padding-bottom: 10px;">Message</h2>
-              <div style="background-color: #f5f5f5; padding: 15px; border-radius: 4px; border-left: 4px solid #667eea; margin-top: 10px;">
-                <p style="margin: 0; color: #333; white-space: pre-wrap;">${escapeHtml(validatedData.message || 'No message provided')}</p>
-              </div>
-            </div>
+        <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1a1a1a; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f7f6;">
+          <div style="background: linear-gradient(135deg, #10b981 0%, #064e3b 100%); padding: 40px 20px; border-radius: 16px 16px 0 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h1 style="color: white; margin: 0; font-size: 28px; letter-spacing: 1px;">New Contact Lead</h1>
+            <p style="color: rgba(255,255,255,0.8); margin-top: 10px; font-size: 14px;">Contact Form Submission</p>
           </div>
           
-          <div style="text-align: center; margin-top: 20px; padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
-            <p style="color: #666; font-size: 12px; margin: 0;">
-              This email was sent from the Myenum Agency contact form.<br>
-              You can reply directly to this email to contact ${escapeHtml(validatedData.name)}.
-            </p>
+          <div style="background-color: white; padding: 35px; border-radius: 0 0 16px 16px; border: 1px solid #e2e8f0; border-top: none; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
+            <div style="margin-bottom: 30px;">
+              <h2 style="color: #10b981; font-size: 18px; margin-top: 0; border-bottom: 1px solid #edf2f7; padding-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Client Information</h2>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px; width: 100px;">Name:</td>
+                  <td style="padding: 8px 0; color: #1e293b; font-weight: 600;">${escapeHtml(validatedData.name)}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px;">Email:</td>
+                  <td style="padding: 8px 0;"><a href="mailto:${validatedData.email}" style="color: #10b981; text-decoration: none; font-weight: 600;">${escapeHtml(validatedData.email)}</a></td>
+                </tr>
+                ${validatedData.phone ? `
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px;">Phone:</td>
+                  <td style="padding: 8px 0;"><a href="tel:${validatedData.phone}" style="color: #10b981; text-decoration: none;">${escapeHtml(validatedData.phone)}</a></td>
+                </tr>
+                ` : ''}
+              </table>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+              <h2 style="color: #10b981; font-size: 18px; margin-top: 0; border-bottom: 1px solid #edf2f7; padding-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Service Details</h2>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px; width: 100px;">Service:</td>
+                  <td style="padding: 8px 0; color: #1e293b;">${escapeHtml(validatedData.service || 'General Inquiry')}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px;">Location:</td>
+                  <td style="padding: 8px 0; color: #1e293b;">${escapeHtml(validatedData.district)}, ${escapeHtml(validatedData.state)}</td>
+                </tr>
+                ${validatedData.dateRange ? `
+                <tr>
+                  <td style="padding: 8px 0; color: #64748b; font-size: 14px;">Preferred Date:</td>
+                  <td style="padding: 8px 0; color: #1e293b;">${escapeHtml(validatedData.dateRange)}</td>
+                </tr>
+                ` : ''}
+              </table>
+            </div>
+
+            <div style="margin-top: 30px;">
+              <h2 style="color: #10b981; font-size: 18px; margin-top: 0; border-bottom: 1px solid #edf2f7; padding-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Message</h2>
+              <div style="background-color: #f8fafc; padding: 20px; border-radius: 12px; border-left: 4px solid #10b981; margin-top: 15px;">
+                <p style="margin: 0; color: #334155; white-space: pre-wrap; font-style: italic;">"${escapeHtml(validatedData.message)}"</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 40px; text-align: center;">
+              <a href="mailto:${validatedData.email}" style="background-color: #10b981; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-block;">Reply to Client</a>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 30px; color: #94a3b8; font-size: 11px; letter-spacing: 0.5px;">
+            <p>© ${new Date().getFullYear()} MyEnum Agency Website Lead Management</p>
+            <p>You received this email because someone submitted a form on your website.</p>
           </div>
         </body>
         </html>

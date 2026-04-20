@@ -5,8 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: 'Terms and Conditions | Myenum Agency - Service Agreement',
-  description: 'Myenum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, confidentiality, and warranty policies for software and web development services.',
+  title: 'Terms and Conditions | MyEnum Agency - Service Agreement',
+  description: 'MyEnum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, confidentiality, and warranty policies for software and web development services.',
   keywords: [
     'terms and conditions',
     'terms of service',
@@ -49,27 +49,27 @@ export const metadata: Metadata = {
     'business agreement',
   ],
   openGraph: {
-    title: 'Terms and Conditions | Myenum Agency',
-    description: 'Myenum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, and warranty policies.',
-    url: 'https://www.myenum.in/terms',
-    siteName: 'Myenum Agency',
+    title: 'Terms and Conditions | MyEnum Agency',
+    description: 'MyEnum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, and warranty policies.',
+    url: 'https://myenum.in/terms',
+    siteName: 'MyEnum Agency',
     type: 'website',
     images: [
       {
-        url: 'https://www.myenum.in/og-image.png',
+        url: '/iconc.webp',
         width: 1200,
         height: 630,
-        alt: 'Myenum Agency Terms and Conditions',
+        alt: 'MyEnum Agency Terms and Conditions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms and Conditions | Myenum Agency',
-    description: 'Myenum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, and warranty policies.',
+    title: 'Terms and Conditions | MyEnum Agency',
+    description: 'MyEnum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, and warranty policies.',
   },
   alternates: {
-    canonical: 'https://www.myenum.in/terms',
+    canonical: 'https://myenum.in/terms',
   },
 };
 
@@ -87,7 +87,7 @@ export default function TermsAndConditions() {
         </CardHeader>
         <CardContent>
           <p>
-            Welcome to Myenum Agency, a professional digital solutions provider specializing in web and software development, 
+            Welcome to MyEnum Agency, a professional digital solutions provider specializing in web and software development, 
             content creation, IT consulting, and digital marketing. These Terms and Conditions govern your use of our services, 
             including but not limited to website development, custom software solutions, consultation services, digital marketing 
             campaigns, and other IT-related services.
@@ -108,7 +108,7 @@ export default function TermsAndConditions() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p>Myenum Agency offers services including:</p>
+            <p>MyEnum Agency offers services including:</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>Web Development (Static, Dynamic, CMS-based, eCommerce)</li>
               <li>Custom Software Development</li>
@@ -131,9 +131,9 @@ export default function TermsAndConditions() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
-              <li>• All intellectual property (source code, designs, branding materials, documents, etc.) created by Myenum Agency remains our property until full payment is received.</li>
+              <li>• All intellectual property (source code, designs, branding materials, documents, etc.) created by MyEnum Agency remains our property until full payment is received.</li>
               <li>• Upon full payment, ownership of the final delivered work is transferred to the client.</li>
-              <li>• Myenum Agency retains the right to showcase the delivered work in our portfolio or marketing materials unless explicitly restricted by a confidentiality agreement.</li>
+              <li>• MyEnum Agency retains the right to showcase the delivered work in our portfolio or marketing materials unless explicitly restricted by a confidentiality agreement.</li>
             </ul>
           </CardContent>
         </Card>
@@ -229,7 +229,7 @@ export default function TermsAndConditions() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
-              <li>• Myenum Agency provides a standard 30-day support warranty after project delivery for bug fixes and minor adjustments.</li>
+              <li>• MyEnum Agency provides a standard 30-day support warranty after project delivery for bug fixes and minor adjustments.</li>
               <li>• Ongoing maintenance can be provided via a separate support agreement.</li>
             </ul>
           </CardContent>
@@ -244,7 +244,7 @@ export default function TermsAndConditions() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
-              <li>• Myenum Agency is not liable for any indirect, incidental, or consequential damages arising out of service use.</li>
+              <li>• MyEnum Agency is not liable for any indirect, incidental, or consequential damages arising out of service use.</li>
               <li>• Our maximum liability is limited to the total amount paid by the client.</li>
             </ul>
           </CardContent>
@@ -302,7 +302,7 @@ export default function TermsAndConditions() {
           </CardHeader>
           <CardContent>
             <p>
-              Myenum Agency reserves the right to update or modify these Terms and Conditions at any time.
+              MyEnum Agency reserves the right to update or modify these Terms and Conditions at any time.
               The latest version will always be published at: <Link href="https://www.myenum.com/terms" className="text-blue-600 hover:underline">https://www.myenum.com/terms</Link>
             </p>
           </CardContent>
