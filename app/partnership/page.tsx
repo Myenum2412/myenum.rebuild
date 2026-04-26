@@ -95,6 +95,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://myenum.in/partnership',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function PartnershipPage() {

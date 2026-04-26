@@ -452,7 +452,15 @@ export const metadata: Metadata = {
     images: ["https://www.thedoctorpro.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://www.thedoctorpro.com/",
+    canonical: "https://myenum.in/product",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 

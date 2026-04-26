@@ -67,6 +67,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://myenum.in/features',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function FeaturesPage() {

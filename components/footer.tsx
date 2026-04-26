@@ -13,12 +13,12 @@ import { Facebook, Instagram, Mail, Send, CheckCircle2 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/logos";
 
 const servicesLinks = [
-  { href: "/undermaintenance", label: "Web Development" },
-  { href: "/undermaintenance", label: "Software Developer" },
-  { href: "/undermaintenance", label: "Digital Marketing" },
-  { href: "/undermaintenance", label: "SEO" },
-  { href: "/undermaintenance", label: "Social Media Management" },
-  { href: "/undermaintenance", label: "Video Editing" },
+  { href: "/features", label: "Web Development" },
+  { href: "/features", label: "Software Developer" },
+  { href: "/features", label: "Digital Marketing" },
+  { href: "/features", label: "SEO" },
+  { href: "/features", label: "Social Media Management" },
+  { href: "/features", label: "Video Editing" },
 ];
 
 const productLinks = [
@@ -28,12 +28,20 @@ const productLinks = [
 ];
 
 const quickLinks = [
-  { href: "/undermaintenance", label: "About" },
+  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/product", label: "Our Product" },
-  { href: "/undermaintenance", label: "Blog" },
-  { href: "/undermaintenance", label: "Privacy Policy" },
-  { href: "/undermaintenance", label: "Terms of Service" },
+  { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
+];
+
+const locationLinks = [
+  { href: "/tamil-nadu", label: "Tamil Nadu" },
+  { href: "/kerala", label: "Kerala" },
+  { href: "/karnataka", label: "Karnataka" },
+  { href: "/uk", label: "United Kingdom" },
+  { href: "/germany", label: "Germany" },
 ];
 
 const communityLinks = [
@@ -45,6 +53,7 @@ const communityLinks = [
 const footerLinks = [
   { name: "Services", links: servicesLinks },
   { name: "Quick Links", links: quickLinks },
+  { name: "Locations", links: locationLinks },
 ];
 
 export default function Footer() {
@@ -135,7 +144,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Links */}
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
           {footerLinks.map((group, idx) => (
             <div key={idx}>
               <h3 className="font-semibold text-lg mb-4">{group.name}</h3>

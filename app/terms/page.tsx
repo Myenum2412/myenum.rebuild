@@ -71,6 +71,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://myenum.in/terms',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function TermsAndConditions() {

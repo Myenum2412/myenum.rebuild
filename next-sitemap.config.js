@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: 'https://myenum.in',
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
   sitemapSize: 5000,
   extraPaths: async () => [
     '/about',

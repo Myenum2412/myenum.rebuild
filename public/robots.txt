@@ -1,15 +1,9 @@
-# robots.txt - Myenum Agency
-# Optimized for search engine crawling
-
+# *
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /*.json$
-Disallow: /undermaintenance
 
-# Crawl-delay for rate limiting
-Crawl-delay: 1
+# Host
+Host: https://myenum.in
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://myenum.in/sitemap.xml
