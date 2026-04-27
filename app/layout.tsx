@@ -89,6 +89,14 @@ export const metadata: Metadata = {
       "en-DE": "https://myenum.in",
     },
   },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'yandex-verification-code',
+    yahoo: 'yahoo-verification-code',
+    other: {
+      me: ['developer@myenum.in', 'https://myenum.in'],
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
