@@ -392,11 +392,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
 
         {/* Ahrefs Analytics */}
-        <script
+        <Script
+          id="ahrefs-analytics"
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="K/mXjnOi6MxGC51EZCroJg"
-          async
-        ></script>
+          strategy="lazyOnload"
+        />
 
         {/* Google Analytics */}
         <Script

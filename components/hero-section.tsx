@@ -68,10 +68,11 @@ export default function HeroSection() {
                             className="absolute inset-0 -z-20">
                             <Image
                                 src="/herobg.jpg"
-                                alt="background"
+                                alt="Software Development Background"
                                 className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-                                width="3276"
-                                height="4095"
+                                width="1920"
+                                height="2400"
+                                priority
                             />
                         </AnimatedGroup>
                         <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
@@ -101,8 +102,8 @@ export default function HeroSection() {
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mt-8 text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                                    Modern Solutions for Business customers
+                                    className="mt-8 text-balance text-6xl font-bold md:text-7xl lg:mt-16 xl:text-[5.25rem]">
+                                    Expert Software Development & Digital Marketing Agency
                                 </TextEffect>
                                 <TextEffect
                                     per="line"
@@ -111,7 +112,7 @@ export default function HeroSection() {
                                     delay={0.5}
                                     as="p"
                                     className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                    Next Level Growth for Your Business 🚀
+                                    Top-rated solutions for Custom Software, SaaS Products, Web Development, and Mobile Apps. 500+ projects delivered globally. 🚀
                                 </TextEffect>
 
                                 <AnimatedGroup
@@ -174,16 +175,16 @@ export default function HeroSection() {
                                     <Image
                                         className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
                                         src="/dash.png"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
+                                        alt="Custom Software Dashboard Screen"
+                                        width="1920"
+                                        height="1024"
                                     />
                                     <Image
                                         className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
                                         src="/dash.png"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
+                                        alt="Custom Software Dashboard Screen"
+                                        width="1920"
+                                        height="1024"
                                     />
                                 </div>
                             </div>

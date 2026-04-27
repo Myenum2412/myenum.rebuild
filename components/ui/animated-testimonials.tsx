@@ -2,7 +2,8 @@
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 
 type Testimonial = {
   quote?: string;
@@ -19,9 +20,9 @@ export const AnimatedTestimonials = ({
 }) => {
   const [active, setActive] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setActive((prev) => (prev + 1) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
   const handlePrev = () => {
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -32,21 +33,28 @@ export const AnimatedTestimonials = ({
   };
 
   useEffect(() => {
-    if (autoplay) {
+    if (autoplay && testimonials.length > 0) {
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
-  
+  }, [autoplay, testimonials.length, handleNext]);
+
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
+
+  if (!testimonials || testimonials.length === 0) {
+    return null;
+  }
+
+  const activeTestimonial = testimonials[active];
+
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased  px-4 md:px-8 lg:px-12 py-12">
-      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
+    <div className="max-w-sm md:max-w-4xl mx-auto antialiased px-4 md:px-8 lg:px-12 py-12">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
           <div className="relative h-[500px] p-3 w-full z-0">
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.src}
@@ -76,20 +84,31 @@ export const AnimatedTestimonials = ({
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0  origin-bottom"
+                  className="absolute inset-0 origin-bottom"
                 >
-                  <video
-                    src={testimonial.src}
-                    width={500}
-                    height={500}
-                    muted
-                    onPause={handleNext}
-                    controls
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
+                  {testimonial.src.match(/\.(mp4|webm|ogg)$/) || testimonial.src.includes('ufs.sh/f/') ? (
+                    <video
+                      src={testimonial.src}
+                      width={500}
+                      height={500}
+                      muted
+                      onPause={handleNext}
+                      autoPlay
+                      loop
+                      playsInline
+                      draggable={false}
+                      className="h-full w-full rounded-3xl object-cover object-center"
+                    />
+                  ) : (
+                    <Image
+                      src={testimonial.src}
+                      alt={testimonial.name}
+                      width={500}
+                      height={500}
+                      draggable={false}
+                      className="h-full w-full rounded-3xl object-cover object-center"
+                    />
+                  )}
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -116,14 +135,14 @@ export const AnimatedTestimonials = ({
             }}
           >
             <h3 className="text-2xl font-bold dark:text-white text-white">
-              {testimonials[active].name}
+              {activeTestimonial?.name}
             </h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500">
-              {testimonials[active].designation}
+              {activeTestimonial?.designation}
             </p>
             <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300 ">
-              {testimonials[active].quote &&
-                testimonials[active].quote.split(" ").map((word, index) => (
+              {activeTestimonial?.quote &&
+                activeTestimonial.quote.split(" ").map((word, index) => (
                   <motion.span
                     key={index}
                     initial={{

@@ -1,5 +1,6 @@
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+import Image from "next/image";
 
 export default function LogoCloud() {
   return (
@@ -7,109 +8,109 @@ export default function LogoCloud() {
       <div className="group relative m-auto max-w-7xl px-6">
         <div className="flex flex-col items-center md:flex-row">
           <div className="md:max-w-44 md:border-r md:pr-6">
-            <p className="text-end text-sm">Our Trusted Clients</p>
+            <p className="text-end text-sm text-muted-foreground font-medium">Our Trusted Clients</p>
           </div>
           <div className="relative py-6 md:w-[calc(100%-11rem)]">
             <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16  w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/aura-fitness.svg"
                   alt="Aura Fitness Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
 
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/BDS-hanslooms.svg"
                   alt="BDS Hanslooms Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition- all"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/Freezing-solutions.svg"
                   alt="Freezing Solutions Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/hallmark-events.svg"
                   alt="Hallmark Events Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/oasis-aquatic-center.svg"
                   alt="Oasis Aquatic Center Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/Radisson-salem.svg"
                   alt="Radisson Salem Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/Ram-Builders.svg"
                   alt="Ram Builders Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
 
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/sky-turf.svg"
                   alt="Sky Turf Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/vignesh.svg"
                   alt="Vignesh Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/Visthara-studios-events.svg"
                   alt="Visthara Studios Events Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
-              <div className="flex">
-                <img
-                  className="mx-auto h-24 max-md:h-16 w-fit grayscale-100 hover:grayscale-0 transition-all duration-150"
+              <div className="flex items-center justify-center h-24 max-md:h-16">
+                <Image
+                  className="grayscale-100 hover:grayscale-0 transition-all duration-150 object-contain"
                   src="/trusted-clients/Yuktah.svg"
                   alt="Yuktah Logo"
-                  height="24"
-                  width="auto"
+                  height={96}
+                  width={200}
                 />
               </div>
             </InfiniteSlider>

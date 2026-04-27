@@ -8,8 +8,8 @@ import CTA2 from '@/components/mvpblocks/cta-2';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'MyEnum Agency | Best Software Development Company India & Global',
-  description: 'Transform your digital presence with MyEnum Agency. Expert software development, custom websites, mobile apps, SaaS products, and digital marketing services. 500+ projects delivered globally. Get free quote today!',
+  title: 'MyEnum Agency | Best Software Development Company & Digital Marketing Agency',
+  description: 'MyEnum Agency is a top-rated software development company and digital marketing agency offering custom software, SaaS products, web development, and mobile apps globally. 500+ projects delivered. Get a free quote today!',
   keywords: [
     "MyEnum Agency",
     "software development",
