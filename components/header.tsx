@@ -1,25 +1,35 @@
 'use client'
 
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import React from 'react'
+import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 
 const menuItems = [
   { name: 'Home', href: '/' },
-  { name: 'BNI-Salem', href: 'https://bni-salem.in/salem-bni-elite/en-IN/memberdetails?encryptedMemberId=G692iL9wFeF033rCMHtOzQ%3D%3D&cmsv3=true&name=Amarnath+MK' },
   { name: 'About Us', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Our Product', href: '/product' },
+  {
+    name: 'Locations',
+    href: '#',
+    children: [
+      { name: 'Tamil Nadu', href: '/tamil-nadu' },
+      { name: 'Kerala', href: '/kerala' },
+      { name: 'Karnataka', href: '/karnataka' },
+      { name: 'UK', href: '/uk' },
+      { name: 'Germany', href: '/germany' },
+    ]
+  },
   { name: 'Partnership', href: '/partnership' },
-  { name: 'Blog', href: '/undermaintenance' },
 ]
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false)
   const [isScrolled, setIsScrolled] = React.useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   React.useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -57,16 +67,48 @@ export const HeroHeader = () => {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex lg:items-center lg:gap-8">
-              <ul className="flex gap-8 text-sm">
+            <div className="hidden lg:flex lg:items-center lg:gap-6">
+              <ul className="flex gap-6 text-sm">
                 {menuItems.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.href}
-                      className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                    >
-                      <span>{item.name}</span>
-                    </Link>
+                  <li key={index} className="relative group">
+                    {item.children ? (
+                      <>
+                        <button
+                          className="text-muted-foreground hover:text-accent-foreground flex items-center gap-1 duration-150"
+                          onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                          onMouseEnter={() => setOpenDropdown(item.name)}
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDown className="w-4 h-4" />
+                        </button>
+                        {/* Dropdown Menu */}
+                        <div
+                          className="absolute top-full left-0 mt-2 min-w-[180px] bg-background border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0"
+                          onMouseEnter={() => setOpenDropdown(item.name)}
+                          onMouseLeave={() => setOpenDropdown(null)}
+                        >
+                          <ul className="py-2">
+                            {item.children.map((child, childIndex) => (
+                              <li key={childIndex}>
+                                <Link
+                                  href={child.href}
+                                  className="text-muted-foreground hover:text-accent-foreground block px-4 py-2 text-sm duration-150"
+                                >
+                                  {child.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                      >
+                        <span>{item.name}</span>
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -96,23 +138,49 @@ export const HeroHeader = () => {
 
             {/* Mobile Menu */}
             {menuState && (
-              <div className="absolute top-full left-0 right-0 mt-3 bg-background block w-full flex-wrap items-center space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 lg:hidden">
+              <div className="absolute top-full left-0 right-0 mt-3 bg-background block w-full flex-wrap items-center space-y-4 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 lg:hidden">
                 {/* Mobile Menu Items */}
-                <ul className="space-y-6 text-base">
+                <ul className="space-y-4 text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                      >
-                        <span>{item.name}</span>
-                      </Link>
+                      {item.children ? (
+                        <div>
+                          <button
+                            onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
+                            className="text-muted-foreground hover:text-accent-foreground flex items-center justify-between w-full duration-150"
+                          >
+                            <span>{item.name}</span>
+                            <ChevronDown className={cn("w-4 h-4 transition-transform", openDropdown === item.name && "rotate-180")} />
+                          </button>
+                          {openDropdown === item.name && (
+                            <ul className="mt-2 ml-4 space-y-2">
+                              {item.children.map((child, childIndex) => (
+                                <li key={childIndex}>
+                                  <Link
+                                    href={child.href}
+                                    className="text-muted-foreground hover:text-accent-foreground block py-1 text-sm duration-150"
+                                  >
+                                    {child.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        >
+                          <span>{item.name}</span>
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
 
                 {/* Contact Us (Mobile) */}
-                <div className="flex w-full">
+                <div className="flex w-full pt-2">
                   <Button asChild size="sm" className="w-full">
                     <Link href="/contact">
                       <span>Contact Us</span>

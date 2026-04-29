@@ -5,26 +5,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // Define all static routes
   const routes = [
-    '',
-    '/about',
-    '/services',
-    '/product',
-    '/contact',
-    '/partnership',
-    '/features',
-    '/privacy',
-    '/terms',
-    '/tamil-nadu',
-    '/kerala',
-    '/karnataka',
-    '/uk',
-    '/germany',
+    { path: '', priority: 1.0, changeFrequency: 'daily' as const },
+    { path: '/about', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/services', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/product', priority: 0.8, changeFrequency: 'weekly' as const },
+    { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/partnership', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/features', priority: 0.7, changeFrequency: 'weekly' as const },
+    { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const },
+    { path: '/terms', priority: 0.3, changeFrequency: 'yearly' as const },
+    { path: '/undermaintenance', priority: 0.1, changeFrequency: 'daily' as const },
+    { path: '/tamil-nadu', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/kerala', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/karnataka', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/uk', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/germany', priority: 0.7, changeFrequency: 'monthly' as const },
   ];
 
   return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${route.path}`,
     lastModified: new Date(),
-    changeFrequency: 'daily',
-    priority: route === '' ? 1.0 : 0.8,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
 }
