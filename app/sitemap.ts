@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/karnataka', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/uk', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/germany', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/careers', priority: 0.6, changeFrequency: 'weekly' as const },
+    { path: '/testimonials', priority: 0.6, changeFrequency: 'monthly' as const },
   ];
 
   return routes.map((route) => ({

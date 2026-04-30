@@ -51,7 +51,7 @@ export default function KarnatakaPage() {
             Software Development & Tech Innovation in <span className="text-primary">Karnataka</span>
           </h1>
           <p className="text-xl text-slate-400 mb-10">
-            From Bangalore's Silicon Valley to Mysore's heritage - we deliver cutting-edge software solutions and digital marketing to businesses across Karnataka.
+            From Bangalore&apos;s Silicon Valley to Mysore&apos;s heritage - we deliver cutting-edge software solutions and digital marketing to businesses across Karnataka.
           </p>
           <div className="flex justify-center gap-4">
             <Button asChild size="lg">
@@ -68,8 +68,8 @@ export default function KarnatakaPage() {
 
       <section className="py-20 px-6 container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Serving Karnataka's Tech Hubs</h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Partner with a team that understands Karnataka's dynamic tech landscape</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Serving Karnataka&apos;s Tech Hubs</h2>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Partner with a team that understands Karnataka&apos;s dynamic tech landscape</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[

@@ -1,6 +1,6 @@
 "use client";
 
-import { HeroHeader } from "@/components/header";
+import { HeroHeader } from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
 import { WhatsAppWidget } from "@/components/WhatsAppWidget";
 import Footer from "@/components/footer";

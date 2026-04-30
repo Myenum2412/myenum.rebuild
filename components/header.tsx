@@ -12,6 +12,8 @@ const menuItems = [
   { name: 'About Us', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Our Product', href: '/product' },
+  // { name: 'Testimonials', href: '/testimonials' },
+  { name: 'Careers', href: '/careers' },
   {
     name: 'Locations',
     href: '#',
@@ -39,7 +41,7 @@ export const HeroHeader = () => {
 
   return (
     <header>
-      <nav className="fixed z-20 w-full px-2">
+      <nav className="fixed z-50 w-full px-2">
         <div
           className={cn(
             'mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12',

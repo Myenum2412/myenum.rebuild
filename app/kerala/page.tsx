@@ -51,7 +51,7 @@ export default function KeralaPage() {
             Software Development & Digital Services in <span className="text-primary">Kerala</span>
           </h1>
           <p className="text-xl text-slate-400 mb-10">
-            From Kochi to Trivandrum, Calicut to Thrissur - we deliver world-class software solutions and digital marketing services to businesses across God's Own Country.
+            From Kochi to Trivandrum, Calicut to Thrissur - we deliver world-class software solutions and digital marketing services to businesses across God&apos;s Own Country.
           </p>
           <div className="flex justify-center gap-4">
             <Button asChild size="lg">
@@ -96,7 +96,7 @@ export default function KeralaPage() {
             <h2 className="text-3xl font-bold mb-6">Why Kerala Businesses Trust Us</h2>
             <p className="text-slate-400 mb-6 text-lg">Combining local market understanding with global technical excellence.</p>
             <ul className="space-y-4 text-slate-300">
-              <li className="flex items-start gap-3"><span className="text-primary">✓</span><span><strong>Local Understanding:</strong> We know Kerala's business culture</span></li>
+              <li className="flex items-start gap-3"><span className="text-primary">✓</span><span><strong>Local Understanding:</strong> We know Kerala&apos;s business culture</span></li>
               <li className="flex items-start gap-3"><span className="text-primary">✓</span><span><strong>Malayalam Support:</strong> Communicate in your preferred language</span></li>
               <li className="flex items-start gap-3"><span className="text-primary">✓</span><span><strong>Startup Friendly:</strong> MVP development for Kerala startups</span></li>
               <li className="flex items-start gap-3"><span className="text-primary">✓</span><span><strong>NRI Solutions:</strong> Specialized services for NRI entrepreneurs</span></li>
