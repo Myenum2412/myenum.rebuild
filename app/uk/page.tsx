@@ -52,7 +52,7 @@ export default function UKPage() {
             Software Development & Digital Services in the <span className="text-primary">United Kingdom</span>
           </h1>
           <p className="text-xl text-slate-400 mb-10">
-            From London's financial district to Manchester's tech hub - we deliver enterprise-grade software solutions and digital marketing to UK businesses of all sizes.
+            From London&apos;s financial district to Manchester&apos;s tech hub - we deliver enterprise-grade software solutions and digital marketing to UK businesses of all sizes.
           </p>
           <div className="flex justify-center gap-4">
             <Button asChild size="lg">

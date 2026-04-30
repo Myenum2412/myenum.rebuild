@@ -1,6 +1,8 @@
 import AboutUs1 from '@/components/mvpblocks/about-us-1';
 import type { Metadata } from 'next';
-import Feature3 from '@/components/mvpblocks/feature-3';
+import AboutSection1 from '@/components/AboutSection1';
+import FeatureCarousel from '@/components/feature-carousel';
+import Stats from '@/components/stats-4';
 
 export const metadata: Metadata = {
   title: 'About Us | MyEnum Agency - Trusted Software & Digital Marketing Company India',
@@ -128,8 +130,11 @@ export default function AboutPage() {
   return (
     <>
       <div className='flex flex-col gap-10'>
-        <AboutUs1 />
-        <Feature3 />
+        {/* <AboutUs1 /> */}
+        <AboutSection1/>
+        {/* <Feature3 /> */}
+        <FeatureCarousel/>
+        <Stats/>
       </div>
     </>
   );
