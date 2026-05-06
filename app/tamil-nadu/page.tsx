@@ -1,50 +1,42 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Features from '@/components/features-12';
 import CTA2 from '@/components/mvpblocks/cta-2';
 
-export const metadata: Metadata = {
-  title: 'Software Development Company in Tamil Nadu | MyEnum Agency - Chennai, Salem, Coimbatore',
-  description: 'Leading software development company in Tamil Nadu offering custom software, web development, mobile apps, and digital marketing services in Chennai, Salem, Coimbatore, Madurai, and across the state.',
-  keywords: [
-    'software development Tamil Nadu',
-    'web development Tamil Nadu',
-    'IT company Tamil Nadu',
-    'software company Chennai',
-    'web development Salem',
-    'software company Coimbatore',
-    'digital marketing Tamil Nadu',
-    'mobile app development Tamil Nadu',
-  ],
-  openGraph: {
-    title: 'Software Development Company in Tamil Nadu | MyEnum Agency',
-    description: 'Leading software development company in Tamil Nadu offering custom software, web development, mobile apps, and digital marketing services.',
-    url: 'https://myenum.in/tamil-nadu',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    locale: 'en_IN',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Software Development Company in Tamil Nadu | MyEnum Agency',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/tamil-nadu',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
 export default function TamilNaduPage() {
   return (
     <main className="pt-20">
+        <SEO
+          title="Software Development Company in Tamil Nadu | MyEnum Agency - Chennai, Salem, Coimbatore"
+          description="Leading software development company in Tamil Nadu offering custom software, web development, mobile apps, and digital marketing services in Chennai, Salem, Coimbatore, Madurai, and across the state."
+          keywords={[
+            'software development Tamil Nadu',
+            'web development Tamil Nadu',
+            'IT company Tamil Nadu',
+            'software company Chennai',
+            'web development Salem',
+            'software company Coimbatore',
+            'digital marketing Tamil Nadu',
+            'mobile app development Tamil Nadu',
+          ]}
+          openGraph={{
+            title: 'Software Development Company in Tamil Nadu | MyEnum Agency',
+            description: 'Leading software development company in Tamil Nadu offering custom software, web development, mobile apps, and digital marketing services.',
+            url: 'https://myenum.in/tamil-nadu',
+            siteName: 'MyEnum Agency',
+            type: 'website',
+            locale: 'en_IN',
+          }}
+          twitter={{
+            card: 'summary_large_image',
+            title: 'Software Development Company in Tamil Nadu | MyEnum Agency',
+          }}
+          alternates={{ canonical: 'https://myenum.in/tamil-nadu' }}
+          robots={{ index: true, follow: true }}
+        />
       <section className="py-20 px-6 text-center bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">

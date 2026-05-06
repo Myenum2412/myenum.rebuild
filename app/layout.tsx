@@ -1,5 +1,5 @@
 // app/layout.tsx
-import type { Metadata } from "next";
+import SEO from '@/components/SEO';
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
@@ -8,97 +8,10 @@ import { ClientLayout } from "@/components/ClientLayout";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const jetbrainsMono = JetBrains_Mono({ variable: "--font-jetbrains-mono", subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://myenum.in'),
-  title: "MyEnum Agency | Best Software Development Company India & Global",
-  description:
-    "Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally. 500+ projects delivered. Get free quote today!",
-  keywords: [
-    "software development company",
-    "best software development company",
-    "custom software development",
-    "SaaS development company",
-    "web development company India",
-    "mobile app development company",
-    "digital marketing services",
-    "SEO agency India",
-    "software development company Salem",
-    "web development Salem",
-    "digital marketing Salem",
-    "software development company Kerala",
-    "web development Kerala",
-    "software development company Bangalore",
-    "software development UK",
-    "software development Germany",
-    "software development USA",
-    "SaaS product development",
-    "enterprise software solutions",
-    "startup software development",
-    "e-commerce website development",
-    "UI UX design services",
-    "React development services",
-    "Node.js development services",
-    "Python development services",
-    "AI development company",
-    "machine learning development",
-    "cloud computing services",
-    "The Doctor Pro",
-    "clinic management software",
-    "hospital management system",
-  ],
-  openGraph: {
-    title: "MyEnum Agency | Best Software Development Company India & Global",
-    description:
-      "Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally. 500+ projects delivered.",
-    url: "https://myenum.in",
-    siteName: "MyEnum Agency",
-    images: [
-      {
-        url: "/iconc.webp",
-        width: 1200,
-        height: 630,
-        alt: "MyEnum Agency - Software Development & Digital Marketing",
-      },
-    ],
-    locale: "en_IN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "MyEnum Agency | Best Software Development Company India & Global",
-    description:
-      "Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally.",
-    images: ["/iconc.webp"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://myenum.in",
-    languages: {
-      "en-IN": "https://myenum.in",
-      "en-GB": "https://myenum.in",
-      "en-DE": "https://myenum.in",
-    },
-  },
-  verification: {
-    google: 'G-DE486L9YQ8',
-    yandex: 'yandex-verification-code',
-    yahoo: 'yahoo-verification-code',
-    other: {
-      me: ['developer@myenum.in', 'https://myenum.in'],
-    },
-  },
-};
 
+
+
+<SEO title="MyEnum Agency | Best Software Development Company India & Global" description="Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally. 500+ projects delivered. Get free quote today!" keywords={["software development company","best software development company","custom software development","SaaS development company","web development company India","mobile app development company","digital marketing services","SEO agency India","software development company Salem","web development Salem","digital marketing Salem","software development company Kerala","web development Kerala","software development company Bangalore","software development UK","software development Germany","software development USA","SaaS product development","enterprise software solutions","startup software development","e-commerce website development","UI UX design services","React development services","Node.js development services","Python development services","AI development company","machine learning development","cloud computing services","The Doctor Pro","clinic management software","hospital management system"]} />
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Main Organization Schema
   const organizationSchema = {

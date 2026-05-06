@@ -1,15 +1,10 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
 import { VortexDemo } from '@/components/VortexDemo';
 
-export const metadata: Metadata = {
-  title: 'Under Maintenance - MyEnum Agency',
-  description: 'This page is currently under maintenance. Please check back soon.',
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
 
+
+
+<SEO title="Under Maintenance - MyEnum Agency" description="This page is currently under maintenance. Please check back soon." />
 export default function UnderMaintenancePage() {
   return (
     <div>

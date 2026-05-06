@@ -1,87 +1,15 @@
 import ContactPageForm from '@/components/ContactPageForm';
 import Faq3 from '@/components/mvpblocks/faq-3';
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbList } from '@/components/ui/breadcrumb';
 import { BreadcrumbPage } from '@/components/ui/breadcrumb';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-    title: 'Contact MyEnum Agency | Get Free Consultation for Software & Digital Marketing',
-    description: 'Contact MyEnum Agency for custom software development, web development, mobile apps, and digital marketing services. Get free consultation today! Reach us for projects in India, UAE, USA, UK, and globally.',
-    keywords: [
-        'contact MyEnum Agency',
-        'contact software company',
-        'get in touch',
-        'contact form',
-        'business inquiry',
-        'software consultation',
-        'website consultation',
-        'digital marketing consultation',
-        'free consultation',
-        'contact for project',
-        'request quote',
-        'get quote',
-        'contact developer',
-        'reach out',
-        'contact email',
-        'contact phone number',
-        'contact Chennai',
-        'contact Bangalore',
-        'contact Hyderabad',
-        'contact Mumbai',
-        'contact Delhi',
-        'contact Kerala',
-        'contact Salem',
-        'contact Dubai',
-        'contact USA',
-        'contact UK',
-        'contact Canada',
-        'contact Australia',
-        'contact for software development',
-        'contact for web development',
-        'contact for mobile app',
-        'contact for SEO',
-        'contact for digital marketing',
-        'business contact',
-        'corporate inquiry',
-        'partnership inquiry',
-        'career inquiry',
-        'support contact',
-        'help contact',
-    ],
-    openGraph: {
-        title: 'Contact MyEnum Agency | Get Free Consultation',
-        description: 'Contact MyEnum Agency for custom software development, web development, mobile apps, and digital marketing services. Get free consultation today!',
-        url: 'https://myenum.in/contact',
-        siteName: 'MyEnum Agency',
-        type: 'website',
-        images: [
-            {
-                url: '/iconc.webp',
-                width: 1200,
-                height: 630,
-                alt: 'Contact MyEnum Agency',
-            },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Contact MyEnum Agency | Get Free Consultation',
-        description: 'Contact MyEnum Agency for custom software development, web development, mobile apps, and digital marketing services.',
-    },
-    alternates: {
-        canonical: 'https://myenum.in/contact',
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-        },
-    },
-};
 
+
+
+<SEO title="Contact MyEnum Agency | Get Free Consultation for Software & Digital Marketing" description="Contact MyEnum Agency for custom software development, web development, mobile apps, and digital marketing services. Get free consultation today! Reach us for projects in India, UAE, USA, UK, and globally." keywords={getMergedKeywords('/contact')} />
 export default function ContactPage() {
     return (
         <>

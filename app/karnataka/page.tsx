@@ -1,47 +1,14 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Features from '@/components/features-12';
 import CTA2 from '@/components/mvpblocks/cta-2';
 
-export const metadata: Metadata = {
-  title: 'Software Development Company in Karnataka | MyEnum Agency - Bangalore, Mysore, Hubli',
-  description: 'Top software development company in Karnataka offering custom software, web development, mobile apps, and digital marketing in Bangalore, Mysore, Hubli, Mangalore, and across Karnataka.',
-  keywords: [
-    'software development Karnataka',
-    'web development Karnataka',
-    'IT company Karnataka',
-    'software company Bangalore',
-    'web development Mysore',
-    'digital marketing Karnataka',
-    'mobile app development Bangalore',
-    'startup development Karnataka',
-  ],
-  openGraph: {
-    title: 'Software Development Company in Karnataka | MyEnum Agency',
-    description: 'Top software development company in Karnataka offering custom software, web development, mobile apps, and digital marketing services.',
-    url: 'https://myenum.in/karnataka',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    locale: 'en_IN',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Software Development Company in Karnataka | MyEnum Agency',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/karnataka',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
+
+
+<SEO title="Software Development Company in Karnataka | MyEnum Agency - Bangalore, Mysore, Hubli" description="Top software development company in Karnataka offering custom software, web development, mobile apps, and digital marketing in Bangalore, Mysore, Hubli, Mangalore, and across Karnataka." keywords={getMergedKeywords('/karnataka')} />
 export default function KarnatakaPage() {
   return (
     <main className="pt-20">

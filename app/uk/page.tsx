@@ -1,48 +1,14 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Features from '@/components/features-12';
 import CTA2 from '@/components/mvpblocks/cta-2';
 
-export const metadata: Metadata = {
-  title: 'Software Development Company in UK | MyEnum Agency - London, Manchester, Birmingham',
-  description: 'Leading software development company serving the UK market. Custom software, web development, mobile apps, and digital marketing for businesses in London, Manchester, Birmingham, and across the United Kingdom.',
-  keywords: [
-    'software development UK',
-    'web development UK',
-    'IT company UK',
-    'software company London',
-    'web development Manchester',
-    'digital marketing UK',
-    'mobile app development UK',
-    'offshore development UK',
-    'outsourced software development UK',
-  ],
-  openGraph: {
-    title: 'Software Development Company in UK | MyEnum Agency',
-    description: 'Leading software development company serving the UK market with custom software, web development, and digital marketing services.',
-    url: 'https://myenum.in/uk',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    locale: 'en_GB',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Software Development Company in UK | MyEnum Agency',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/uk',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
+
+
+<SEO title="Software Development Company in UK | MyEnum Agency - London, Manchester, Birmingham" description="Leading software development company serving the UK market. Custom software, web development, mobile apps, and digital marketing for businesses in London, Manchester, Birmingham, and across the United Kingdom." keywords={getMergedKeywords('/uk')} />
 export default function UKPage() {
   return (
     <main className="pt-20">

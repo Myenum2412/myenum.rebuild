@@ -1,47 +1,14 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Features from '@/components/features-12';
 import CTA2 from '@/components/mvpblocks/cta-2';
 
-export const metadata: Metadata = {
-  title: 'Software Development Company in Kerala | MyEnum Agency - Kochi, Trivandrum, Calicut',
-  description: 'Leading software development company in Kerala offering custom software, web development, mobile apps, and digital marketing in Kochi, Trivandrum, Calicut, Thrissur, and across Kerala.',
-  keywords: [
-    'software development Kerala',
-    'web development Kerala',
-    'IT company Kerala',
-    'software company Kochi',
-    'web development Trivandrum',
-    'digital marketing Kerala',
-    'mobile app development Kerala',
-    'IT services Kochi',
-  ],
-  openGraph: {
-    title: 'Software Development Company in Kerala | MyEnum Agency',
-    description: 'Leading software development company in Kerala offering custom software, web development, mobile apps, and digital marketing services.',
-    url: 'https://myenum.in/kerala',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    locale: 'en_IN',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Software Development Company in Kerala | MyEnum Agency',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/kerala',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
+
+
+<SEO title="Software Development Company in Kerala | MyEnum Agency - Kochi, Trivandrum, Calicut" description="Leading software development company in Kerala offering custom software, web development, mobile apps, and digital marketing in Kochi, Trivandrum, Calicut, Thrissur, and across Kerala." keywords={getMergedKeywords('/kerala')} />
 export default function KeralaPage() {
   return (
     <main className="pt-20">
