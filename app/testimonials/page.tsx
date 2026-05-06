@@ -1,74 +1,10 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Link from 'next/link';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbList } from '@/components/ui/breadcrumb';
 import { BreadcrumbPage } from '@/components/ui/breadcrumb';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-
-export const metadata: Metadata = {
-  title: 'Client Testimonials | MyEnum Agency - Reviews from 500+ Happy Clients',
-  description: 'Read what our clients say about MyEnum Agency. Real reviews from businesses we have helped with software development, web design, mobile apps, and digital marketing. 500+ projects delivered globally.',
-  keywords: [
-    'MyEnum Agency reviews',
-    'client testimonials',
-    'customer reviews',
-    'client feedback',
-    'MyEnum client reviews',
-    'software company reviews',
-    'web development reviews',
-    'digital marketing reviews',
-    'client success stories',
-    'customer testimonials India',
-    'MyEnum success stories',
-    'client case studies',
-    'happy clients',
-    '5 star reviews',
-    'trusted software company',
-    'verified reviews',
-    'client ratings',
-    'MyEnum ratings',
-    'software development testimonials',
-    'web design testimonials',
-    'mobile app testimonials',
-    'SEO testimonials',
-    'client quotes',
-    'what clients say',
-    'client experience',
-    'project reviews',
-    'service reviews',
-  ],
-  openGraph: {
-    title: 'Client Testimonials | MyEnum Agency - Reviews from 500+ Happy Clients',
-    description: 'Read what our clients say about MyEnum Agency. Real reviews from businesses we have helped with software development, web design, and digital marketing.',
-    url: 'https://myenum.in/testimonials',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    images: [
-      {
-        url: '/iconc.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Client Testimonials - MyEnum Agency',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Client Testimonials | MyEnum Agency',
-    description: 'Read what our clients say about MyEnum Agency. Real reviews from 500+ happy clients.',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/testimonials',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
 const testimonials = [
   {
@@ -176,6 +112,7 @@ const stats = [
   { value: '10+', label: 'Years Experience' },
 ];
 
+<SEO title="Client Testimonials | MyEnum Agency - Reviews from 500+ Happy Clients" description="Read what our clients say about MyEnum Agency. Real reviews from businesses we have helped with software development, web design, mobile apps, and digital marketing. 500+ projects delivered globally." keywords={["MyEnum Agency reviews',","client testimonials',","customer reviews',","client feedback',","MyEnum client reviews',","software company reviews',","web development reviews',","digital marketing reviews',","client success stories',","customer testimonials India',","MyEnum success stories',","client case studies',","happy clients',","5 star reviews',","trusted software company',","verified reviews',","client ratings',","MyEnum ratings',","software development testimonials',","web design testimonials',","mobile app testimonials',","SEO testimonials',","client quotes',","what clients say',","client experience',","project reviews',","service reviews',"]} />
 export default function TestimonialsPage() {
   return (
     <div className="pt-26 pb-20">

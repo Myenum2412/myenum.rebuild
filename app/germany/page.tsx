@@ -1,48 +1,14 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Features from '@/components/features-12';
 import CTA2 from '@/components/mvpblocks/cta-2';
 
-export const metadata: Metadata = {
-  title: 'Software Development Company in Germany | MyEnum Agency - Berlin, Munich, Hamburg',
-  description: 'Professional software development company serving Germany. Custom software, web development, mobile apps, and digital marketing for businesses in Berlin, Munich, Hamburg, Frankfurt, and across Germany.',
-  keywords: [
-    'software development Germany',
-    'web development Germany',
-    'IT company Germany',
-    'software company Berlin',
-    'web development Munich',
-    'digital marketing Germany',
-    'mobile app development Germany',
-    'outsourced development Germany',
-    'nearshore development Germany',
-  ],
-  openGraph: {
-    title: 'Software Development Company in Germany | MyEnum Agency',
-    description: 'Professional software development company serving Germany with custom software, web development, and digital marketing services.',
-    url: 'https://myenum.in/germany',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    locale: 'de_DE',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Software Development Company in Germany | MyEnum Agency',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/germany',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
+
+
+<SEO title="Software Development Company in Germany | MyEnum Agency - Berlin, Munich, Hamburg" description="Professional software development company serving Germany. Custom software, web development, mobile apps, and digital marketing for businesses in Berlin, Munich, Hamburg, Frankfurt, and across Germany." keywords={getMergedKeywords('/germany')} />
 export default function GermanyPage() {
   return (
     <main className="pt-20">

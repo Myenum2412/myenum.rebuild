@@ -1,86 +1,10 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Link from 'next/link';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbList } from '@/components/ui/breadcrumb';
 import { BreadcrumbPage } from '@/components/ui/breadcrumb';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-
-export const metadata: Metadata = {
-  title: 'Careers | MyEnum Agency - Join Our Team of Developers & Designers',
-  description: 'Join MyEnum Agency - We are hiring talented software developers, web developers, UI/UX designers, digital marketers, and more. Work on exciting projects with a dynamic team. Apply now!',
-  keywords: [
-    'careers at MyEnum Agency',
-    'jobs at MyEnum',
-    'MyEnum hiring',
-    'software developer jobs',
-    'web developer jobs',
-    'UI UX designer jobs',
-    'digital marketing jobs',
-    'frontend developer jobs',
-    'backend developer jobs',
-    'full stack developer jobs',
-    'React developer jobs',
-    'Node.js developer jobs',
-    'Python developer jobs',
-    'mobile app developer jobs',
-    'Flutter developer jobs',
-    'React Native developer jobs',
-    'SEO specialist jobs',
-    'social media manager jobs',
-    'content writer jobs',
-    'graphic designer jobs',
-    'video editor jobs',
-    'project manager jobs',
-    'business development jobs',
-    'sales executive jobs',
-    'HR executive jobs',
-    'internship opportunities',
-    'freshers jobs',
-    'experienced jobs',
-    'work at MyEnum',
-    'join MyEnum team',
-    'MyEnum careers page',
-    'software jobs India',
-    'IT jobs Salem',
-    'IT jobs Chennai',
-    'IT jobs Bangalore',
-    'IT jobs Kerala',
-    'remote developer jobs',
-    'work from home jobs',
-    'hybrid work jobs',
-  ],
-  openGraph: {
-    title: 'Careers | MyEnum Agency - Join Our Team',
-    description: 'Join MyEnum Agency - We are hiring talented developers, designers, and digital marketers. Apply now!',
-    url: 'https://myenum.in/careers',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    images: [
-      {
-        url: '/iconc.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Careers at MyEnum Agency',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Careers | MyEnum Agency - Join Our Team',
-    description: 'Join MyEnum Agency - We are hiring talented developers, designers, and digital marketers.',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/careers',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
 const jobOpenings = [
   {
@@ -208,6 +132,7 @@ const benefits = [
   },
 ];
 
+<SEO title="Careers | MyEnum Agency - Join Our Team of Developers & Designers" description="Join MyEnum Agency - We are hiring talented software developers, web developers, UI/UX designers, digital marketers, and more. Work on exciting projects with a dynamic team. Apply now!" keywords={["careers at MyEnum Agency',","jobs at MyEnum',","MyEnum hiring',","software developer jobs',","web developer jobs',","UI UX designer jobs',","digital marketing jobs',","frontend developer jobs',","backend developer jobs',","full stack developer jobs',","React developer jobs',","Node.js developer jobs',","Python developer jobs',","mobile app developer jobs',","Flutter developer jobs',","React Native developer jobs',","SEO specialist jobs',","social media manager jobs',","content writer jobs',","graphic designer jobs',","video editor jobs',","project manager jobs',","business development jobs',","sales executive jobs',","HR executive jobs',","internship opportunities',","freshers jobs',","experienced jobs',","work at MyEnum',","join MyEnum team',","MyEnum careers page',","software jobs India',","IT jobs Salem',","IT jobs Chennai',","IT jobs Bangalore',","IT jobs Kerala',","remote developer jobs',","work from home jobs',","hybrid work jobs',"]} />
 export default function CareersPage() {
   return (
     <div className="pt-26 pb-20">

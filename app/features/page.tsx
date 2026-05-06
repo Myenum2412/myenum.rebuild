@@ -1,82 +1,11 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Features from '@/components/features-3';
 
-export const metadata: Metadata = {
-  title: 'Features & Services - MyEnum Agency | Software, Web & Digital Solutions',
-  description: 'Discover MyEnum Agency\'s powerful features and capabilities. Custom software development, responsive websites, mobile apps, SaaS products, and comprehensive digital marketing services. View all features!',
-  keywords: [
-    'Myenum features',
-    'software features',
-    'website features',
-    'digital marketing features',
-    'our services',
-    'what we offer',
-    'software services',
-    'web services',
-    'digital services',
-    'development services',
-    'custom software features',
-    'web development features',
-    'mobile app features',
-    'SaaS product features',
-    'digital marketing features',
-    'SEO features',
-    'PPC features',
-    'social media features',
-    'UI UX design features',
-    'cloud services features',
-    'API development features',
-    'e-commerce features',
-    'custom development',
-    'enterprise solutions',
-    'startup solutions',
-    'business solutions',
-    'digital transformation',
-    'innovation features',
-    'technology stack',
-    'development tools',
-    'programming languages',
-    'frameworks we use',
-    'security features',
-    'scalability features',
-    'performance features',
-    'support features',
-    'maintenance features',
-    'consulting features',
-  ],
-  openGraph: {
-    title: 'Features & Services - MyEnum Agency',
-    description: 'Discover MyEnum Agency\'s powerful features and capabilities. Custom software, websites, mobile apps, and digital marketing services.',
-    url: 'https://myenum.in/features',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    images: [
-      {
-        url: '/iconc.webp',
-        width: 1200,
-        height: 630,
-        alt: 'MyEnum Agency Features & Services',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Features & Services - MyEnum Agency',
-    description: 'Discover MyEnum Agency\'s powerful features and capabilities. Custom software, websites, mobile apps, and digital marketing.',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/features',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
+
+
+<SEO title="Features & Services - MyEnum Agency | Software, Web & Digital Solutions" description="Discover MyEnum Agency\" keywords={["Myenum features',\r","software features',\r","website features',\r","digital marketing features',\r","our services',\r","what we offer',\r","software services',\r","web services',\r","digital services',\r","development services',\r","custom software features',\r","web development features',\r","mobile app features',\r","SaaS product features',\r","digital marketing features',\r","SEO features',\r","PPC features',\r","social media features',\r","UI UX design features',\r","cloud services features',\r","API development features',\r","e-commerce features',\r","custom development',\r","enterprise solutions',\r","startup solutions',\r","business solutions',\r","digital transformation',\r","innovation features',\r","technology stack',\r","development tools',\r","programming languages',\r","frameworks we use',\r","security features',\r","scalability features',\r","performance features',\r","support features',\r","maintenance features',\r","consulting features',"]} />
 export default function FeaturesPage() {
   return (
     <>

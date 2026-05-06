@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Image from 'next/image';
 import Link from 'next/link';
 import FreshworksFeatures from '@/components/FreshworksFeatures';
@@ -8,103 +9,10 @@ import FreshworksProducts from '@/components/FreshworksProducts';
 import CTA2 from '@/components/mvpblocks/cta-2';
 import { ArrowRight } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Partnership Program | MyEnum Agency - Become a Partner for Software & Digital Solutions',
-  description: 'Partner with MyEnum Agency for complete business solutions, software development, and digital marketing. Join our partnership program for mutual growth. Freshworks Partner. India, UAE, USA, Global partners welcome.',
-  keywords: [
-    'partnership',
-    'partnership program',
-    'become a partner',
-    'business partnership',
-    'software partnership',
-    'digital partnership',
-    'partner with us',
-    'reseller partnership',
-    'referral program',
-    'affiliate program',
-    'White label partnership',
-    'technology partner',
-    'business partner',
-    'strategic partnership',
-    'Freshworks partner',
-    'Freshworks implementation partner',
-    'software implementation partner',
-    'channel partner',
-    'solution partner',
-    'consulting partner',
-    'integration partner',
-    'partnership inquiry',
-    'grow business together',
-    'mutual growth',
-    'collaboration',
-    'joint venture',
-    'business collaboration',
-    'technology collaboration',
-    'startup partnership',
-    'enterprise partnership',
-    'SMB partnership',
-    'partnership benefits',
-    'partner network',
-    'partners directory',
-    'IT partnership',
-    'digital transformation partner',
-    'software development partner',
-    'web development partner',
-    'mobile app partner',
-    'digital marketing partner',
-    'India partnership',
-    'UAE partnership',
-    'USA partnership',
-    'UK partnership',
-    'global partnership',
-    'partnership opportunities',
-    'partnership for growth',
-    'partnership for business',
-    'partnership for software',
-    'partnership for digital marketing',
-    'Salem partnership',
-    'Chennai partnership',
-    'Kerala partnership',
-    'Dubai partnership',
-    'Bangalore partnership',
-    'co-partnership',
-    'corporate partnership',
-    'business alliance',
-    'strategic alliance',
-  ],
-  openGraph: {
-    title: 'Partnership Program | MyEnum Agency',
-    description: 'Partner with MyEnum Agency for complete business solutions, software development, and digital marketing. Join our partnership program.',
-    url: 'https://myenum.in/partnership',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    images: [
-      {
-        url: '/iconc.webp',
-        width: 1200,
-        height: 630,
-        alt: 'MyEnum Agency Partnership Program',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Partnership Program | MyEnum Agency',
-    description: 'Partner with MyEnum Agency for complete business solutions, software development, and digital marketing.',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/partnership',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
+
+
+<SEO title="Partnership Program | MyEnum Agency - Become a Partner for Software & Digital Solutions" description="Partner with MyEnum Agency for complete business solutions, software development, and digital marketing. Join our partnership program for mutual growth. Freshworks Partner. India, UAE, USA, Global partners welcome." keywords={getMergedKeywords('/partnership')} />
 export default function PartnershipPage() {
   return (
     <div className='flex flex-col min-h-screen'>

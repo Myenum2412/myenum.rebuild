@@ -1,86 +1,14 @@
 // app/terms/page.tsx
-import type { Metadata } from 'next';
+import SEO from '@/components/SEO';
+import { getMergedKeywords } from '@/src/seo/defaultKeywords';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-export const metadata: Metadata = {
-  title: 'Terms and Conditions | MyEnum Agency - Service Agreement',
-  description: 'MyEnum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, confidentiality, and warranty policies for software and web development services.',
-  keywords: [
-    'terms and conditions',
-    'terms of service',
-    'service agreement',
-    'terms of use',
-    'terms',
-    'conditions',
-    'Myenum terms',
-    'service contract',
-    'payment terms',
-    'project terms',
-    'agreement',
-    'contract terms',
-    'legal terms',
-    'business terms',
-    'software development terms',
-    'web development terms',
-    'intellectual property',
-    'IP rights',
-    'confidentiality agreement',
-    'non-disclosure',
-    'NDA',
-    'payment policy',
-    'refund policy',
-    'cancellation policy',
-    'termination policy',
-    'warranty terms',
-    'support terms',
-    'liability terms',
-    'limitation of liability',
-    'governing law',
-    'jurisdiction',
-    'dispute resolution',
-    'amendments',
-    'updates',
-    'contact terms',
-    'legal agreement',
-    'client agreement',
-    'service provider terms',
-    'business agreement',
-  ],
-  openGraph: {
-    title: 'Terms and Conditions | MyEnum Agency',
-    description: 'MyEnum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, and warranty policies.',
-    url: 'https://myenum.in/terms',
-    siteName: 'MyEnum Agency',
-    type: 'website',
-    images: [
-      {
-        url: '/iconc.webp',
-        width: 1200,
-        height: 630,
-        alt: 'MyEnum Agency Terms and Conditions',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Terms and Conditions | MyEnum Agency',
-    description: 'MyEnum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, and warranty policies.',
-  },
-  alternates: {
-    canonical: 'https://myenum.in/terms',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-};
 
+
+
+<SEO title="Terms and Conditions | MyEnum Agency - Service Agreement" description="MyEnum Agency Terms and Conditions. Read our service agreement, payment terms, intellectual property rights, confidentiality, and warranty policies for software and web development services." keywords={getMergedKeywords('/terms')} />
 export default function TermsAndConditions() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
