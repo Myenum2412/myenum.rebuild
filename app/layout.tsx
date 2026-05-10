@@ -4,6 +4,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { ClientLayout } from "@/components/ClientLayout";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const jetbrainsMono = JetBrains_Mono({ variable: "--font-jetbrains-mono", subsets: ["latin"] });
@@ -11,7 +12,7 @@ const jetbrainsMono = JetBrains_Mono({ variable: "--font-jetbrains-mono", subset
 
 
 
-<SEO title="MyEnum Agency | Best Software Development Company India & Global" description="Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally. 500+ projects delivered. Get free quote today!" keywords={["software development company","best software development company","custom software development","SaaS development company","web development company India","mobile app development company","digital marketing services","SEO agency India","software development company Salem","web development Salem","digital marketing Salem","software development company Kerala","web development Kerala","software development company Bangalore","software development UK","software development Germany","software development USA","SaaS product development","enterprise software solutions","startup software development","e-commerce website development","UI UX design services","React development services","Node.js development services","Python development services","AI development company","machine learning development","cloud computing services","The Doctor Pro","clinic management software","hospital management system"]} />
+<SEO title="MyEnum Agency | Best Software Development Company India & Global" description="Top-rated software development company offering custom software, SaaS products, web development, mobile apps, and digital marketing services globally. 500+ projects delivered. Get free quote today!" keywords={["software development company", "best software development company", "custom software development", "SaaS development company", "web development company India", "mobile app development company", "digital marketing services", "SEO agency India", "software development company Salem", "web development Salem", "digital marketing Salem", "software development company Kerala", "web development Kerala", "software development company Bangalore", "software development UK", "software development Germany", "software development USA", "SaaS product development", "enterprise software solutions", "startup software development", "e-commerce website development", "UI UX design services", "React development services", "Node.js development services", "Python development services", "AI development company", "machine learning development", "cloud computing services", "The Doctor Pro", "clinic management software", "hospital management system"]} />
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Main Organization Schema
   const organizationSchema = {
@@ -280,7 +281,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} ${jetbrainsMono.variable} antialiased dark text-slate-50`}
     >
       <body>
-        <ClientLayout>{children}</ClientLayout>
+        <ClientLayout>{children}
+        <Analytics mode="production" />
+
+        </ClientLayout>
 
         {/* Schema.org JSON-LD - Multiple schemas */}
         {allSchemas.map((schema, index) => (
