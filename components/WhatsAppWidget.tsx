@@ -44,7 +44,7 @@ export function WhatsAppWidget() {
             message,
           }),
         });
-      } catch (e) {
+      } catch (e:unknown) {
         // Silently continue
       }
     }
