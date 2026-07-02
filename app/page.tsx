@@ -21,7 +21,6 @@ export default function Home() {
         <Features />
         <GlowingTable />
         <IntegrationsSection />
-        <TeamSection />
         <CTA2 />
       </main>
     </>
